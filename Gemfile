@@ -5,6 +5,14 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# Devise views in SLIM
+gem 'haml'
+gem 'hpricot'
+gem 'ruby_parser'
+gem 'slim'
+gem 'haml2slim'
+
+# END
 gem 'sqlite3'
 gem 'slim-rails'
 gem 'bootstrap-sass', '~> 2.2.2.0'
