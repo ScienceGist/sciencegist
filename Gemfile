@@ -6,9 +6,9 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem "slim-rails"
+gem 'slim-rails'
 gem 'bootstrap-sass', '~> 2.2.2.0'
-
+gem 'psych'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
