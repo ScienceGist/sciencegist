@@ -227,7 +227,15 @@
 			"file": "app/views/layouts/application.html.slim",
 			"settings":
 			{
-				"buffer_size": 274,
+				"buffer_size": 280,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/pages/index.html.slim",
+			"settings":
+			{
+				"buffer_size": 28,
 				"line_ending": "Unix"
 			}
 		}
@@ -628,7 +636,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -768,15 +776,41 @@
 					"file": "app/views/layouts/application.html.slim",
 					"settings":
 					{
-						"buffer_size": 274,
+						"buffer_size": 280,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								274,
-								274
+								280,
+								280
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/pages/index.html.slim",
+					"settings":
+					{
+						"buffer_size": 28,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28,
+								28
 							]
 						],
 						"settings":
@@ -841,6 +875,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"ind",
+				"app/views/pages/index.html.slim"
+			],
 			[
 				"app",
 				"app/views/layouts/application.html.slim"
@@ -1348,10 +1386,6 @@
 			[
 				"res",
 				"config/resque.yml"
-			],
-			[
-				"deve",
-				"config/environments/development.rb"
 			]
 		],
 		"width": 0.0

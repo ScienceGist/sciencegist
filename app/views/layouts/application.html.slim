@@ -8,4 +8,8 @@ html
     javascript:
       try{Typekit.load();}catch(e){}
   body
-    = yield
+    = render :partial => 'layouts/header'
+    .container
+      .row
+        .span12
+          = yield
