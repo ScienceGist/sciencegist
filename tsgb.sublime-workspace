@@ -183,6 +183,54 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 933,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 663,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/typography.css.scss",
+			"settings":
+			{
+				"buffer_size": 43,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 86,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/application.css.scss",
+			"settings":
+			{
+				"buffer_size": 553,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.slim",
+			"settings":
+			{
+				"buffer_size": 274,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -288,6 +336,8 @@
 	},
 	"file_history":
 	[
+		"/Users/jure/src/tsgb/app/views/layouts/application.html.slim",
+		"/Users/jure/src/tsgb/app/assets/stylesheets/application.scss",
 		"/Users/jure/src/academia/.git/MERGE_MSG",
 		"/Users/jure/src/well-with-me-server/db/migrate/20130102164541_add_parent_activity_id_to_activity_team.rb",
 		"/Users/jure/src/well-with-me-server/config/initializers/redis.rb",
@@ -413,9 +463,7 @@
 		"/Users/jure/Src/academia/app/models/news_grouping.rb",
 		"/Users/jure/Src/academia/app/models/report.rb",
 		"/Users/jure/Src/academia/app/scripts/reports/views/pagination_view.coffee",
-		"/Users/jure/Src/academia/app/scripts/reports/templates/pagination.jst.ejs",
-		"/Users/jure/Src/academia/app/lib/impermeable.rb",
-		"/Users/jure/Src/academia/config/routes.rb"
+		"/Users/jure/Src/academia/app/scripts/reports/templates/pagination.jst.ejs"
 	],
 	"find":
 	{
@@ -580,8 +628,167 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 933,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								802,
+								802
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/assets/javascripts/application.js",
+					"settings":
+					{
+						"buffer_size": 663,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								663,
+								663
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/stylesheets/typography.css.scss",
+					"settings":
+					{
+						"buffer_size": 43,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 86,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								86,
+								86
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/stylesheets/application.css.scss",
+					"settings":
+					{
+						"buffer_size": 553,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								553,
+								553
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/layouts/application.html.slim",
+					"settings":
+					{
+						"buffer_size": 274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								274,
+								274
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -635,6 +842,22 @@
 		"selected_items":
 		[
 			[
+				"app",
+				"app/views/layouts/application.html.slim"
+			],
+			[
+				"",
+				"app/assets/stylesheets/typography.css.scss"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
 				"chal",
 				"app/models/challenge.rb"
 			],
@@ -653,10 +876,6 @@
 			[
 				"acti",
 				"app/models/activity.rb"
-			],
-			[
-				"",
-				"app/models/challenge.rb"
 			],
 			[
 				"ch",
@@ -721,10 +940,6 @@
 			[
 				"devi",
 				"config/initializers/devise.rb"
-			],
-			[
-				"app",
-				"config/application.rb"
 			],
 			[
 				"admincha",
@@ -855,10 +1070,6 @@
 				"Capfile"
 			],
 			[
-				"gem",
-				"Gemfile"
-			],
-			[
 				"rea",
 				"README"
 			],
@@ -889,10 +1100,6 @@
 			[
 				"activt",
 				"spec/factories/activity.rb"
-			],
-			[
-				"rout",
-				"config/routes.rb"
 			],
 			[
 				"help",
@@ -1156,7 +1363,7 @@
 		[
 			[
 				"",
-				"/Users/jure/src/theberlin6-config/theberlin6-config.sublime-project"
+				"/Users/jure/src/well-with-me-server/wellwithme.sublime-project"
 			],
 			[
 				"tea",
