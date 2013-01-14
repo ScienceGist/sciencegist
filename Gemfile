@@ -10,6 +10,7 @@ gem 'slim-rails'
 gem 'bootstrap-sass', '~> 2.2.2.0'
 gem 'psych'
 gem 'devise'
+gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

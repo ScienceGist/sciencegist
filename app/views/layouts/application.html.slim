@@ -1,6 +1,6 @@
 html
   head
-    title Tsgb
+    title The Science Gap Bridge
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -12,4 +12,6 @@ html
     .container
       .row
         .span12
+          .notice= notice
+          .alert= alert
           = yield

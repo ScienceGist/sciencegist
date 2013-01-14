@@ -187,7 +187,7 @@
 			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 933,
+				"buffer_size": 946,
 				"line_ending": "Unix"
 			}
 		},
@@ -219,7 +219,7 @@
 			"file": "app/assets/stylesheets/application.css.scss",
 			"settings":
 			{
-				"buffer_size": 553,
+				"buffer_size": 602,
 				"line_ending": "Unix"
 			}
 		},
@@ -227,7 +227,15 @@
 			"file": "app/views/layouts/application.html.slim",
 			"settings":
 			{
-				"buffer_size": 280,
+				"buffer_size": 438,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/_header.html.slim",
+			"settings":
+			{
+				"buffer_size": 126,
 				"line_ending": "Unix"
 			}
 		},
@@ -236,6 +244,30 @@
 			"settings":
 			{
 				"buffer_size": 28,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/pages.css.scss",
+			"settings":
+			{
+				"buffer_size": 227,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/initializers/devise.rb",
+			"settings":
+			{
+				"buffer_size": 11635,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/database.yml",
+			"settings":
+			{
+				"buffer_size": 607,
 				"line_ending": "Unix"
 			}
 		}
@@ -636,7 +668,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 10,
 			"sheets":
 			[
 				{
@@ -644,15 +676,15 @@
 					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 933,
+						"buffer_size": 946,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								802,
-								802
+								848,
+								848
 							]
 						],
 						"settings":
@@ -750,15 +782,15 @@
 					"file": "app/assets/stylesheets/application.css.scss",
 					"settings":
 					{
-						"buffer_size": 553,
+						"buffer_size": 602,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								553,
-								553
+								580,
+								580
 							]
 						],
 						"settings":
@@ -776,15 +808,43 @@
 					"file": "app/views/layouts/application.html.slim",
 					"settings":
 					{
-						"buffer_size": 280,
+						"buffer_size": 438,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								280,
-								280
+								438,
+								438
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/layouts/_header.html.slim",
+					"settings":
+					{
+						"buffer_size": 126,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								126,
+								126
 							]
 						],
 						"settings":
@@ -798,7 +858,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "app/views/pages/index.html.slim",
 					"settings":
 					{
@@ -816,6 +876,88 @@
 						"settings":
 						{
 							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/assets/stylesheets/pages.css.scss",
+					"settings":
+					{
+						"buffer_size": 227,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								202,
+								202
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "config/initializers/devise.rb",
+					"settings":
+					{
+						"buffer_size": 11635,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3504,
+								3504
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 697.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "config/database.yml",
+					"settings":
+					{
+						"buffer_size": 607,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								244,
+								244
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -876,16 +1018,32 @@
 		"selected_items":
 		[
 			[
+				"dat",
+				"config/database.yml"
+			],
+			[
+				"devi",
+				"config/initializers/devise.rb"
+			],
+			[
+				"",
+				"app/views/layouts/application.html.slim"
+			],
+			[
+				"gm",
+				"Gemfile"
+			],
+			[
+				"pages",
+				"app/assets/stylesheets/pages.css.scss"
+			],
+			[
 				"ind",
 				"app/views/pages/index.html.slim"
 			],
 			[
 				"app",
 				"app/views/layouts/application.html.slim"
-			],
-			[
-				"",
-				"app/assets/stylesheets/typography.css.scss"
 			],
 			[
 				"rout",
@@ -974,10 +1132,6 @@
 			[
 				"om",
 				"app/controllers/users/omniauth_callbacks_controller.rb"
-			],
-			[
-				"devi",
-				"config/initializers/devise.rb"
 			],
 			[
 				"admincha",
@@ -1374,18 +1528,6 @@
 			[
 				"dep",
 				"config/deploy.rb"
-			],
-			[
-				"no",
-				"app/models/notification.rb"
-			],
-			[
-				"pr",
-				"config/environments/production.rb"
-			],
-			[
-				"res",
-				"config/resque.yml"
 			]
 		],
 		"width": 0.0
