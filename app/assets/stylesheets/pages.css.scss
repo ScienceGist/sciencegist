@@ -3,6 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .header {
+  .brand {
+    font-size: 24px;
+    font-weight: 900;
+    font-style: normal;
+  }
+  .links {
+    text-align: right;
+  }
+  line-height: 48px;
+  height: 48px;
   background: #CC2C27;
   color: white;
 }
