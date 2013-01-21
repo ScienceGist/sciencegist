@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.wrap {
+  max-width: 660px;
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 3rem;
+  padding-bottom: 0.5rem;
+}
+
+footer .wrap {
+  padding-top: 1rem;
+}
+
+p, ul, ol, dl, table, pre, form,
+h2, .beta, h3, .gamma {
+  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 60px;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h2 {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: .1em;
+  font-size: 16px;
+  font-size: .8rem;
+  line-height: 1.875;
+}
+
+.subtitle {
+  margin-bottom: 1.25rem;
+  padding-top: .25rem;
+}
+
+.subtitle, small {
+  color: rgba(0,0,0,.5);
+}
+
+small {
+  font-size: 16px;
+  font-size: .8rem;
+  line-height: 1;
+}
+
+a {
+  color: #E92F4A;
+  text-decoration: none;
+}
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+html {
+  font: 125%/1.5 freight-text-pro, serif;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+  @media screen and (max-width: 650px) {
+    html {
+      font-size: 100%;
+    }
+  }
+
+.freight {
+  font-family: freight-text-pro, serif;
+}
+
+.freight .subtitle, .freight .sans, .freight small {
+  font-family: freight-sans-pro, sans-serif;
+}
+
+.site-footer {
+  font-family: freight-sans-pro, sans-serif;
+}
+
+.gist {
+  color: #E92F4A;
+}

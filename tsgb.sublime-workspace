@@ -187,7 +187,7 @@
 			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 946,
+				"buffer_size": 956,
 				"line_ending": "Unix"
 			}
 		},
@@ -211,7 +211,7 @@
 			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 86,
+				"buffer_size": 107,
 				"line_ending": "Unix"
 			}
 		},
@@ -235,7 +235,7 @@
 			"file": "app/views/layouts/_header.html.slim",
 			"settings":
 			{
-				"buffer_size": 126,
+				"buffer_size": 138,
 				"line_ending": "Unix"
 			}
 		},
@@ -251,7 +251,7 @@
 			"file": "app/assets/stylesheets/pages.css.scss",
 			"settings":
 			{
-				"buffer_size": 227,
+				"buffer_size": 384,
 				"line_ending": "Unix"
 			}
 		},
@@ -267,7 +267,15 @@
 			"file": "config/database.yml",
 			"settings":
 			{
-				"buffer_size": 607,
+				"buffer_size": 609,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 467,
 				"line_ending": "Unix"
 			}
 		}
@@ -668,7 +676,7 @@
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -676,15 +684,15 @@
 					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 946,
+						"buffer_size": 956,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								848,
-								848
+								242,
+								242
 							]
 						],
 						"settings":
@@ -754,15 +762,15 @@
 					"file": "config/routes.rb",
 					"settings":
 					{
-						"buffer_size": 86,
+						"buffer_size": 107,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								86,
-								86
+								107,
+								107
 							]
 						],
 						"settings":
@@ -836,15 +844,15 @@
 					"file": "app/views/layouts/_header.html.slim",
 					"settings":
 					{
-						"buffer_size": 126,
+						"buffer_size": 138,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								126,
-								126
+								90,
+								90
 							]
 						],
 						"settings":
@@ -888,15 +896,15 @@
 					"file": "app/assets/stylesheets/pages.css.scss",
 					"settings":
 					{
-						"buffer_size": 227,
+						"buffer_size": 384,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								202,
-								202
+								384,
+								384
 							]
 						],
 						"settings":
@@ -932,7 +940,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 697.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -942,15 +950,15 @@
 					"file": "config/database.yml",
 					"settings":
 					{
-						"buffer_size": 607,
+						"buffer_size": 609,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								244,
-								244
+								609,
+								609
 							]
 						],
 						"settings":
@@ -958,6 +966,32 @@
 							"syntax": "Packages/YAML/YAML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/models/user.rb",
+					"settings":
+					{
+						"buffer_size": 467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1018,16 +1052,32 @@
 		"selected_items":
 		[
 			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"",
+				"app/assets/stylesheets/pages.css.scss"
+			],
+			[
+				"_he",
+				"app/views/layouts/_header.html.slim"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
 				"dat",
 				"config/database.yml"
 			],
 			[
 				"devi",
 				"config/initializers/devise.rb"
-			],
-			[
-				"",
-				"app/views/layouts/application.html.slim"
 			],
 			[
 				"gm",
@@ -1050,16 +1100,8 @@
 				"config/routes.rb"
 			],
 			[
-				"gem",
-				"Gemfile"
-			],
-			[
 				"chal",
 				"app/models/challenge.rb"
-			],
-			[
-				"user",
-				"app/models/user.rb"
 			],
 			[
 				"api.rb",
@@ -1228,10 +1270,6 @@
 			[
 				"curre",
 				"app/models/current_activity.rb"
-			],
-			[
-				"rou",
-				"config/routes.rb"
 			],
 			[
 				"member",
@@ -1524,10 +1562,6 @@
 			[
 				"dev",
 				"config/environments/development.rb"
-			],
-			[
-				"dep",
-				"config/deploy.rb"
 			]
 		],
 		"width": 0.0
