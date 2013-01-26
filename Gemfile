@@ -12,6 +12,9 @@ gem 'psych'
 gem 'devise'
 gem 'pg'
 gem 'simple_form'
+gem 'redcarpet'
+gem 'pygmentize'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
