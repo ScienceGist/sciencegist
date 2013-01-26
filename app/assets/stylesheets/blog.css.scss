@@ -5,7 +5,15 @@
   padding-top: 12px;
   padding-bottom: 12px;
   background: $blog_background_color;
-  .brand span {
+  font-family: freight-text-pro;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: italic;
+  color: $font_color;
+  .gist {
+    color: $color;
+  }
+.brand span {
     padding-bottom: 6px;
     border-bottom: 1px solid $font_color;
   }

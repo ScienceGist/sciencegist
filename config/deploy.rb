@@ -2,7 +2,7 @@ set :application, "sg"
 set :scm, :git
 set :repository,  "git@github.com:jure/tsgb.git"
 set :branch, "master"
-
+set :use_sudo, false
 set :ssh_options, { :forward_agent => true }
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
@@ -19,6 +19,16 @@ set :unicorn_pid, '/tmp/unicorn.sg.pid'
 set :default_environment, {
   'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH",
 }
+
+set :rails_env, 'production'
+set :rack_env, 'production'
+set :app_env, 'production'
+set :unicorn_env, 'production'
+set :hipchat_env, 'production'
+
+set :user, 'deploy'
+set :deploy_to,   "/home/#{user}/apps/#{application}/"
+set :current_path, File.join(deploy_to, current_dir)
 
 require "bundler/capistrano"
 require "capistrano-unicorn"

@@ -8,10 +8,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.header {
+.subtitle {
+  font-family: freight-sans-pro;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 180px;
+}
+
+.header-launch {
   .brand {
+    margin-top: 120px;
+    text-align: center;
     font-family: freight-text-pro;
-    font-size: 24px;
+    font-size: 72px;
     font-weight: 400;
     font-style: italic;
     color: $font_color;

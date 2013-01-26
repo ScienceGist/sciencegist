@@ -5,6 +5,8 @@ Sg::Application.routes.draw do
   get "pages/index"
   get '/blog' => 'blog#index'
 
+  match '', to: 'blog#index', constraints: lambda { |r| r.subdomain.present? && r.subdomain != 'www' }
+
   root :to => 'pages#index'
 
   namespace :admin do
