@@ -1,10 +1,12 @@
 html
   head
     title The Science Gap Bridge
+    //= favicon_link_tag 'favicon.png'
+
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-    = javascript_include_tag "//use.typekit.net/hzz5xka.js"
+    = javascript_include_tag "//use.typekit.net/stn4qyl.js"
     javascript:
       try{Typekit.load();}catch(e){}
   body
@@ -12,6 +14,7 @@ html
     .container
       .row
         .span12
-          .notice= notice
-          .alert= alert
+          - if flash[:notice] || flash[:alert]
+            .notice= notice
+            .alert= alert
           = yield

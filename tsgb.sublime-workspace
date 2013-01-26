@@ -243,7 +243,7 @@
 			"file": "app/views/layouts/application.html.slim",
 			"settings":
 			{
-				"buffer_size": 438,
+				"buffer_size": 478,
 				"line_ending": "Unix"
 			}
 		},
@@ -251,7 +251,7 @@
 			"file": "app/views/layouts/_header.html.slim",
 			"settings":
 			{
-				"buffer_size": 138,
+				"buffer_size": 145,
 				"line_ending": "Unix"
 			}
 		},
@@ -267,7 +267,7 @@
 			"file": "app/assets/stylesheets/pages.css.scss",
 			"settings":
 			{
-				"buffer_size": 384,
+				"buffer_size": 491,
 				"line_ending": "Unix"
 			}
 		},
@@ -692,7 +692,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 10,
 			"sheets":
 			[
 				{
@@ -1175,7 +1175,96 @@
 						],
 						"settings":
 						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
 							"spell_check": true,
+							"sublimelinter": "save-only",
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"ruby": "/Users/jure/.rbenv/shims/ruby"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -1198,12 +1287,101 @@
 						"selection":
 						[
 							[
-								1175,
-								1175
+								1088,
+								984
 							]
 						],
 						"settings":
 						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": "save-only",
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"ruby": "/Users/jure/.rbenv/shims/ruby"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
@@ -1334,15 +1512,15 @@
 					"file": "app/views/layouts/application.html.slim",
 					"settings":
 					{
-						"buffer_size": 438,
+						"buffer_size": 478,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								438,
-								438
+								478,
+								478
 							]
 						],
 						"settings":
@@ -1451,15 +1629,15 @@
 					"file": "app/views/layouts/_header.html.slim",
 					"settings":
 					{
-						"buffer_size": 138,
+						"buffer_size": 145,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								90,
-								90
+								108,
+								108
 							]
 						],
 						"settings":
@@ -1681,15 +1859,15 @@
 					"file": "app/assets/stylesheets/pages.css.scss",
 					"settings":
 					{
-						"buffer_size": 384,
+						"buffer_size": 491,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								384,
-								384
+								491,
+								491
 							]
 						],
 						"settings":
@@ -2195,8 +2373,20 @@
 		"selected_items":
 		[
 			[
+				"page",
+				"app/assets/stylesheets/pages.css.scss"
+			],
+			[
+				"appl",
+				"app/assets/stylesheets/application.css.scss"
+			],
+			[
 				"",
 				"public/launch/style.css"
+			],
+			[
+				"hea",
+				"app/views/layouts/_header.html.slim"
 			],
 			[
 				"in",
@@ -2483,10 +2673,6 @@
 				"lib/api/helpers.rb"
 			],
 			[
-				"appl",
-				"config/application.rb"
-			],
-			[
 				"d",
 				"app/models/activity_observer.rb"
 			],
@@ -2697,14 +2883,6 @@
 			[
 				"s3",
 				"config/s3.yml"
-			],
-			[
-				"pro",
-				"config/environments/production.rb"
-			],
-			[
-				"prod",
-				"config/deploy/production.rb"
 			]
 		],
 		"width": 0.0
@@ -2714,6 +2892,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"po",
+				"/Users/jure/src/potninalogi/potninalogi.sublime-project"
+			],
 			[
 				"",
 				"/Users/jure/src/well-with-me-server/wellwithme.sublime-project"

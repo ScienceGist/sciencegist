@@ -2,17 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html {
+  font: 125%/1.5 freight-sans-pro, serif;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
 .header {
   .brand {
+    font-family: freight-text-pro;
     font-size: 24px;
-    font-weight: 900;
-    font-style: normal;
+    font-weight: 400;
+    font-style: italic;
+    color: $font_color;
+    .gist {
+      color: $color;
+    }
   }
+
   .links {
     text-align: right;
   }
   line-height: 48px;
   height: 48px;
-  background: #CC2C27;
+  background: $header_color;
   color: white;
+
 }
