@@ -1,3 +1,55 @@
-// Place all the styles related to the blog controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'variables';
+
+.header {
+  height: 48px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: $blog_background_color;
+  .brand span {
+    padding-bottom: 6px;
+    border-bottom: 1px solid $font_color;
+  }
+}
+
+html {
+  font: 125%/1.5 freight-text-pro, serif;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  font: inherit;
+  background: $blog_background_color;
+  img {
+    margin: 0 auto;
+  }
+  .footer {
+    font-family: freight-sans-pro, sans-serif;
+    font-size: 16px;
+    font-size: .8rem;
+    color: rgba(0,0,0,.5);
+  }
+  a {
+    color: $color;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.post {
+  h1.title {
+   font-family: freight-sans-pro, sans-serif;
+   font-style: normal;
+   font-weight: 500;
+  }
+  .information {
+    font-family: freight-sans-pro, sans-serif;
+    color: rgba(0,0,0,.5);
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .1em;
+    font-size: 16px;
+    font-size: .8rem;
+    line-height: 1.875;
+  }
+}

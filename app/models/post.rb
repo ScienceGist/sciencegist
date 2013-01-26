@@ -1,12 +1,28 @@
 class Post < ActiveRecord::Base
-  attr_accessible :author, :content, :title, :published
+  attr_accessible :author, :content, :title, :published, :published_at
 
   before_save :render_body
 
-  def friendly_created_at
-    created_at.strftime("%b %d, %Y")
+  validates_presence_of :title
+  validates_presence_of :author
+  validates_presence_of :content
+  validate :published_and_published_at
+
+  scope :published, (lambda do
+    where(published: true)
+  end)
+
+  def friendly_published_at
+    published_at.strftime("%b %d, %Y")
   end
+
   private
+
+  def published_and_published_at
+    if published
+      errors[:published_at] << 'Can not be empty if published is true' unless published_at
+    end
+  end
 
   def render_body
     renderer = PygmentizeHTML

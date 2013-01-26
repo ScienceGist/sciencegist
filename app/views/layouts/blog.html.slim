@@ -1,0 +1,18 @@
+html
+  head
+    title ScienceGist - Developer’s blog
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = stylesheet_link_tag "blog"
+    = csrf_meta_tags
+    = load_typekit
+  body
+    = render :partial => 'layouts/blog_header'
+    .container
+      .row
+        .span8.offset2
+          - if flash[:notice] || flash[:alert]
+            .notice= notice
+            .alert= alert
+          = yield
+      = render 'layouts/blog_footer'

@@ -1,10 +1,11 @@
 tr
   td= post.id
-  th= post.created_at
-  th= post.title
-  th= post.author
-  th= post.published
-  th
+  td= post.created_at
+  td= post.title
+  td= post.author
+  td= post.published
+  td= post.published_at
+  td
     = link_to 'Edit', edit_admin_post_path(post.id)
     | &nbsp;
     = link_to 'Delete', admin_post_path(post.id), :method => :delete
