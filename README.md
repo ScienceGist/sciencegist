@@ -1,4 +1,4 @@
-tsgb
+Sg
 ====
 
-The Science Gap Bridge
+ScienceGist

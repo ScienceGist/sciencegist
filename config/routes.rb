@@ -1,4 +1,4 @@
-Tsgb::Application.routes.draw do
+Sg::Application.routes.draw do
 
   devise_for :users
 
