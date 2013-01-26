@@ -3,6 +3,9 @@ class Post < ActiveRecord::Base
 
   before_save :render_body
 
+  def friendly_created_at
+    created_at.strftime("%b %d, %Y")
+  end
   private
 
   def render_body
