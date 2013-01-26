@@ -1,0 +1,7 @@
+= link_to "ScienceGist Admin", admin_root_path, :class => 'brand'
+ul.nav.pull-right
+  li
+    = link_to 'Posts', admin_posts_url
+  - if user_signed_in?
+    li
+      = link_to('Sign out', destroy_user_session_path, :method=>'delete')

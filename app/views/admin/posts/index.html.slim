@@ -1,0 +1,14 @@
+h1 Posts
+
+table.table
+  tr
+    th Id
+    th Createdat
+    th Title
+    th Author
+    th Published
+    th Actions
+  - @posts.each do |post|
+    = render 'post', post: post
+
+= render 'form', post: @post

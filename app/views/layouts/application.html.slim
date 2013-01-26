@@ -1,14 +1,10 @@
 html
   head
     title The Science Gap Bridge
-    //= favicon_link_tag 'favicon.png'
-
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-    = javascript_include_tag "//use.typekit.net/stn4qyl.js"
-    javascript:
-      try{Typekit.load();}catch(e){}
+    = load_typekit
   body
     = render :partial => 'layouts/header'
     .container

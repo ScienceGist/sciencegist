@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title ScienceGist - Admin
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = stylesheet_link_tag "admin/base"
+    = csrf_meta_tags
+    = load_typekit
+  body#admin
+    header.navbar.navbar-fixed-top
+      nav.navbar-inner
+        .container
+          = render 'layouts/admin/navigation'
+    #main
+      .container
+        .content
+          .row
+            #mainspan.span12
+              = yield
+          footer

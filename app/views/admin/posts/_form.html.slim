@@ -1,0 +1,6 @@
+= simple_form_for [:admin, post], :html => {:class => 'form-vertical'} do |f|
+  = f.input :title
+  = f.input :author
+  = f.input :published
+  = f.input :content, :as => :text
+  = f.button :submit
