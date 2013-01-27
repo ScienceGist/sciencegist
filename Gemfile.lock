@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/engageis/activerecord-postgres-hstore.git
+  revision: f92b012ea1a7149388c24fd52740e6d091706e66
+  specs:
+    activerecord-postgres-hstore (0.5.3)
+      rails
+      rake
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -179,6 +187,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-postgres-hstore!
   bootstrap-sass (~> 2.2.2.0)
   capistrano
   capistrano-unicorn

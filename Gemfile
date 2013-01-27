@@ -16,6 +16,7 @@ gem 'redcarpet'
 gem 'pygmentize'
 gem 'capistrano'
 gem 'capistrano-unicorn'
+gem 'activerecord-postgres-hstore', github: 'engageis/activerecord-postgres-hstore'
 
 # Gems used only for assets and not required
 # in production environments by default.
