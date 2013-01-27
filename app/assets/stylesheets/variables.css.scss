@@ -4,3 +4,9 @@ $background_color: #F5F4F0;
 $blog_background_color: white;
 //$header_color: darken($background_color, 10);
 $header_color: white;
+$shadow_color: darken($background_color,5);
+
+//Theme colors
+$color_1: #C6F798;
+$default_button_color: lighten($color_1,24);
+$placeholder_color: darken($shadow_color, 20);

@@ -1,2 +1,4 @@
-h1 Papers#show
-p Find me in app/views/papers/show.html.slim
+h1 Title #{@paper.title}
+h2 Gists
+- @paper.gists.each_with_index do |gist, i|
+  = render 'gist', gist: gist, i: i

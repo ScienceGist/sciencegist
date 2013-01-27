@@ -1,0 +1,9 @@
+p First, tell us which paper this gist is for, starting with its title:
+= f.simple_fields_for :paper do |p|
+  = p.input :title, label: false, placeholder: 'Title'
+  p It would be great to have its abstract too:
+  = p.input :abstract, label: false, placeholder: 'Abstract (just copy and paste is fine)'
+p Finally, the gist. Describe in simple terms what the paper is about:
+= f.input :content, label: false, placeholder: 'The Gist'
+.submit
+  = f.button :submit, :class => 'btn btn-large'

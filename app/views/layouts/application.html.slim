@@ -5,12 +5,13 @@ html
     = javascript_include_tag "application"
     = csrf_meta_tags
     = load_typekit
-  body
+  body*{:class => "#{controller.controller_name}_#{controller.action_name}" }
     = render :partial => 'layouts/header'
     .container
       .row
         .span12
-          - if flash[:notice] || flash[:alert]
+          - if flash[:notice]
             .notice= notice
+          - if flash[:alert]
             .alert= alert
           = yield

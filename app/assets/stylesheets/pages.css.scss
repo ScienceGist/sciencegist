@@ -2,25 +2,81 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 body {
-  font: 125%/1.5 freight-sans-pro, serif;
+  background: $background_color;
+  font-size: inherit;
+  font-family: inherit;
+  font: inherit;
   color: #222;
   -webkit-font-smoothing: antialiased;
 }
 
-.subtitle {
-  font-family: freight-sans-pro;
+html {
+  font: 125%/1.5 freight-sans-pro, serif;
+}
+
+// First page add gist box
+.add_gist_box {
+  .title {
+    font-family: freight-sans-pro;
+  }
+  p {
+    font-family: freight-text-pro;
+  }
   font-size: 20px;
   text-align: center;
-  margin-top: 180px;
+  margin-top: 120px;
+  background: white;
+  padding: 72px;
+  @include box-shadow($shadow_color 2px 2px 2px);
+}
+
+.add_gist {
+  a.btn {
+    margin-top: 20px;
+    background: $color_1;
+    border: none;
+    border-radius: 0;
+
+  }
+}
+
+.btn {
+  border: none;
+  border-radius: 0;
+  background: $default_button_color;
+}
+
+.small {
+  font-size: 16px;
+  font-size: .8rem;
+  color: rgba(0,0,0,.5);
+}
+// Brand link
+
+a#brand {
+  color: inherit;
+}
+
+a#brand:hover {
+  text-decoration: none;
+};
+
+a {
+  color: $color;
+  text-decoration: none;
+}
+a:hover {
+  color: $color;
+  text-decoration: underline;
 }
 
 .header-launch {
   .brand {
-    margin-top: 120px;
-    text-align: center;
+    margin-top: 0px;
     font-family: freight-text-pro;
-    font-size: 72px;
+    font-size: 24px;
     font-weight: 400;
     font-style: italic;
     color: $font_color;
@@ -30,10 +86,48 @@ body {
   }
 
   .links {
+    color: $font_color;
+    a {
+      margin-left: 12px;
+    }
+    i {
+      margin-top: 7px;
+      margin-right: 6px;
+    }
     text-align: right;
   }
   line-height: 48px;
   height: 48px;
   background: $header_color;
+  @include box-shadow($shadow_color 0px 2px 2px);
   color: white;
+}
+
+.new_user {
+  padding: 24px;
+  margin-top: 12px;
+  @include box-shadow($shadow_color 2px 2px 2px);
+  background-color: lighten($color_1, 5);
+  input[type=text], input[type=email], input[type=password], input {
+    width: 100%;
+  }
+  .btn {
+    height: 30px;
+  }
+}
+
+.new_gist {
+  input[type=text] {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+    height: 240px;
+  }
+  .submit {
+    .btn {
+      background: $color_1;
+    }
+    text-align: right;
+  }
 }

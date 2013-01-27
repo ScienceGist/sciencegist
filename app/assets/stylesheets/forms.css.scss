@@ -1,0 +1,38 @@
+label {
+  font-size: 20px;
+}
+
+// Basically a slight reset of Bootstrap's stuff to make it rectangular
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+  border: 1px solid lighter($font_color, 20);
+  border-radius: 0;
+  height: 30px;
+  font-size: 16px;
+  font-family: freight-sans-pro;
+}
+
+// Placeholder
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+   //color: $placeholder_color;
+   font-size: 16px;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
+   //color: $placeholder_color;
+   font-size: 16px;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {  /* Firefox 19+ */
+   //color: $placeholder_color;
+   font-size: 16px;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+   //color: $placeholder_color;
+   font-size: 16px;
+}
+
+.btn-large {
+  padding-top: 10px;
+}

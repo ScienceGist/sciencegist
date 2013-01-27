@@ -1,6 +1,7 @@
 .brand
-  span
-    | Science
-    span.gist Gist
-    - if defined? title
-      span.title &nbsp;&ndash; #{title}
+  a#brand href='/'
+    span
+      | Science
+      span.gist Gist
+      - if defined? title
+        span.title &nbsp;&ndash; #{title}

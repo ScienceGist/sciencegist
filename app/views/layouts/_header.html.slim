@@ -1,8 +1,16 @@
 .header-launch
   .container
     .row
-      .span12
+      .span6
         = render 'layouts/brand'
-      / .span4.offset7.links
-      /   | For scientists For publishers Login
+      .span6.links
+        - if current_user
+          span
+            | <i class="icon-user icon-black"></i>
+            | Hi, #{current_user.email}!
+            = link_to 'Log out', destroy_user_session_path, :method => :delete
+        = link_to 'Add gist', new_gist_path
+        = link_to 'New', gists_path
+
+
 

@@ -1,1 +1,9 @@
-p.subtitle BRIDGE THE SCIENCE GAP AND SPEED UP THE WORLD’S RESEARCH
+.row
+  .span6.offset3
+    .add_gist_box
+      div.welcome
+        p.title BRIDGE THE SCIENCE GAP AND SPEED UP THE WORLD’S RESEARCH
+        p Welcome to the ScienceGist community where we respect and nurture the art of simplifiying very complex concepts into clear and concise ideas. Our source of complexity are scientific papers. Click “Add gist” below to join us.
+      .add_gist
+        = link_to '<i class="icon-plus"></i>Add gist'.html_safe, new_gist_path,
+          :class => 'btn btn-large'

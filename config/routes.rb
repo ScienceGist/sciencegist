@@ -5,7 +5,7 @@ Sg::Application.routes.draw do
   get "pages/index"
   get '/blog' => 'blog#index'
 
-  get '/p/:id' => 'papers#show'
+  get '/p/:id' => 'papers#show', :as => 'paper'
 
   match '', to: 'blog#index', constraints: lambda { |r| r.subdomain.present? && r.subdomain != 'www' }
 
