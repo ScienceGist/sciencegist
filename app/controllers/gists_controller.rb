@@ -3,9 +3,11 @@ class GistsController < ApplicationController
   end
 
   def show
+
   end
 
   def update
+
   end
 
   def create
@@ -18,5 +20,6 @@ class GistsController < ApplicationController
   end
 
   def new
+    @gist = Gist.new
   end
 end

@@ -1,7 +1,5 @@
 Sg::Application.routes.draw do
 
-  get "papers/show"
-
   devise_for :users
 
   get "pages/index"
