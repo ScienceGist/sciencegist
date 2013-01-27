@@ -255,7 +255,7 @@
 			"file": "config/deploy.rb",
 			"settings":
 			{
-				"buffer_size": 1418,
+				"buffer_size": 1694,
 				"line_ending": "Unix"
 			}
 		},
@@ -351,12 +351,15 @@
 			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 1045,
+				"buffer_size": 1129,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "# config/unicorn.rb\n# Set environment to development unless something else is specified\nenv = ENV[\"RAILS_ENV\"] || \"development\"\n\n# See http://unicorn.bogomips.org/Unicorn/Configurator.html for complete\n# documentation.\nworker_processes 1\n\n# listen on both a Unix domain socket and a TCP port,\n# we use a shorter backlog for quicker failover when busy\nlisten \"/tmp/sg.socket\", :backlog => 64\nlisten 8039, :tcp_nopush => true\n\n# Preload our app for more speed\npreload_app true\n\n# nuke workers after 30 seconds instead of 60 seconds (the default)\ntimeout 30\n\npid \"/tmp/unicorn.sg.pid\"\n\n# Production specific settings\nif env == \"production\"\n  # Help ensure your application will always spawn in the symlinked\n  # \"current\" directory that Capistrano sets up.\n  working_directory \"/home/deploy/apps/sg/current\"\n\n  # feel free to point this anywhere accessible on the filesystem\n  user 'deploy', 'staff'\n  shared_path = \"/home/deploy/apps/sg/shared\"\n\n  stderr_path \"#{shared_path}/log/unicorn.stderr.log\"\n  stdout_path \"#{shared_path}/log/unicorn.stdout.log\"\nend\n\nbefore_fork do |server, worker|\n  # the following is highly recomended for Rails + \"preload_app true\"\n  # as there's no need for the master process to hold a connection\n  if defined?(ActiveRecord::Base)\n    ActiveRecord::Base.connection.disconnect!\n  end\n\n  # Before forking, kill the master process that belongs to the .oldbin PID.\n  # This enables 0 downtime deploys.\n  old_pid = \"/tmp/unicorn.sg.pid.oldbin\"\n  if File.exists?(old_pid) && server.pid != old_pid\n    begin\n      Process.kill(\"QUIT\", File.read(old_pid).to_i)\n    rescue Errno::ENOENT, Errno::ESRCH\n      # someone else did our job for us\n    end\n  end\nend\n\nafter_fork do |server, worker|\n  # the following is *required* for Rails + \"preload_app true\",\n  if defined?(ActiveRecord::Base)\n    ActiveRecord::Base.establish_connection\n  end\n\n  # if preload_app is true, then you may also want to check and\n  # restart any other shared sockets/descriptors such as Memcached,\n  # and Redis.  TokyoCabinet file handles are safe to reuse\n  # between any number of forked children (assuming your kernel\n  # correctly implements pread()/pwrite() system calls)\nend\n",
 			"file": "unicorn/production.rb",
+			"file_size": 2176,
+			"file_write_time": 1359240438000000,
 			"settings":
 			{
 				"buffer_size": 2176,
@@ -376,6 +379,22 @@
 			"settings":
 			{
 				"buffer_size": 340,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/paper.rb",
+			"settings":
+			{
+				"buffer_size": 162,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "db/migrate/20130127124045_create_papers.rb",
+			"settings":
+			{
+				"buffer_size": 251,
 				"line_ending": "Unix"
 			}
 		}
@@ -467,7 +486,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 564.0
+		"width": 566.0
 	},
 	"console":
 	{
@@ -1709,15 +1728,15 @@
 					"file": "config/deploy.rb",
 					"settings":
 					{
-						"buffer_size": 1418,
+						"buffer_size": 1694,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1074,
-								1074
+								1350,
+								1350
 							]
 						],
 						"settings":
@@ -2295,8 +2314,8 @@
 						"selection":
 						[
 							[
-								278,
-								278
+								784,
+								784
 							]
 						],
 						"settings":
@@ -2395,7 +2414,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 106.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -2403,7 +2422,7 @@
 			]
 		},
 		{
-			"selected": 16,
+			"selected": 21,
 			"sheets":
 			[
 				{
@@ -4062,15 +4081,15 @@
 					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 1045,
+						"buffer_size": 1129,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								662,
-								662
+								419,
+								419
 							]
 						],
 						"settings":
@@ -4184,8 +4203,8 @@
 						"selection":
 						[
 							[
-								1426,
-								1426
+								1407,
+								1407
 							]
 						],
 						"settings":
@@ -4284,7 +4303,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 157.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -4526,15 +4545,15 @@
 					"file": "config/deploy.rb",
 					"settings":
 					{
-						"buffer_size": 1418,
+						"buffer_size": 1694,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								816,
-								816
+								953,
+								953
 							]
 						],
 						"settings":
@@ -4635,6 +4654,238 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "app/models/paper.rb",
+					"settings":
+					{
+						"buffer_size": 162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": "save-only",
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"ruby": "/Users/jure/.rbenv/shims/ruby"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "db/migrate/20130127124045_create_papers.rb",
+					"settings":
+					{
+						"buffer_size": 251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								58,
+								233
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": "save-only",
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+								"ruby": "/Users/jure/.rbenv/shims/ruby"
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
 				}
 			]
 		}
@@ -4696,8 +4947,24 @@
 		"selected_items":
 		[
 			[
+				"papes",
+				"db/migrate/20130127124045_create_papers.rb"
+			],
+			[
+				"pape",
+				"app/models/paper.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
 				"pro",
 				"unicorn/production.rb"
+			],
+			[
+				"depl",
+				"config/deploy.rb"
 			],
 			[
 				"deplo",
@@ -4762,10 +5029,6 @@
 			[
 				"capi",
 				"Capfile"
-			],
-			[
-				"gem",
-				"Gemfile"
 			],
 			[
 				"d",
@@ -5194,18 +5457,6 @@
 			[
 				"notific",
 				"app/models/notification.rb"
-			],
-			[
-				"launch",
-				"app/assets/stylesheets/launch.css.scss"
-			],
-			[
-				"device",
-				"app/models/device.rb"
-			],
-			[
-				"notification",
-				"app/jobs/notification_sender.rb"
 			]
 		],
 		"width": 0.0
