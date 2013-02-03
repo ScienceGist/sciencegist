@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130127173701) do
+ActiveRecord::Schema.define(:version => 20130203215259) do
 
   create_table "gists", :force => true do |t|
     t.integer  "paper_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20130127173701) do
     t.hstore   "metadata"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.string   "identifier"
   end
 
   create_table "posts", :force => true do |t|

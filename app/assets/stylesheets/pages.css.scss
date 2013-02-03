@@ -29,7 +29,7 @@ html {
   margin-top: 120px;
   background: white;
   padding: 72px;
-  @include box-shadow($shadow_color 2px 2px 2px);
+  @include nice_shadow;
 }
 
 .add_gist {
@@ -106,7 +106,7 @@ a:hover {
 .new_user {
   padding: 24px;
   margin-top: 12px;
-  @include box-shadow($shadow_color 2px 2px 2px);
+  @include nice_shadow;
   background-color: lighten($color_1, 5);
   input[type=text], input[type=email], input[type=password], input {
     width: 100%;

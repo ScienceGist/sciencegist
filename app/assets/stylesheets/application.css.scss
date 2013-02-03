@@ -9,10 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  */
+
 @import "variables";
+@import "mixins";
 @import "bootstrap";
 @import "bootstrap-responsive";
 @import "pages";
+@import "gists";
 @import "typography";
 @import "boxes";
 @import "forms";

@@ -1,9 +1,11 @@
-p First, tell us which paper this gist is for, starting with its title:
+p
+  strong Identifier (DOI or arXiv)
+  |First, tell us which paper this gist is for, by providing it's identifier:
 = f.simple_fields_for :paper do |p|
-  = p.input :title, label: false, placeholder: 'Title'
-  p It would be great to have its abstract too:
-  = p.input :abstract, label: false, placeholder: 'Abstract (just copy and paste is fine)'
-p Finally, the gist. Describe in simple terms what the paper is about:
+  = p.input :identifier, label: false, placeholder: 'DOI (e.g. “doi: 10.1021/ac1014832”) or arXiv identifier (e.g. “arXiv:1301.7746”)'
+p
+  strong Gist
+  | Describe in simple terms what the paper is about:
 = f.input :content, label: false, placeholder: 'The Gist'
 .submit
   = f.button :submit, :class => 'btn btn-large'

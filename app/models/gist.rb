@@ -5,5 +5,22 @@ class Gist < ActiveRecord::Base
 
   accepts_nested_attributes_for :paper
 
+  validates_presence_of :paper
+  validates_presence_of :content
 
+  before_save :render_content
+
+  def author_name
+    if user
+      user.email
+    else
+      'Anonymous'
+    end
+  end
+
+  private
+
+  def render_content
+    self.content_html = Kramdown::Document.new(content).to_html
+  end
 end

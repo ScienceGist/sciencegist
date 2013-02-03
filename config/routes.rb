@@ -11,6 +11,8 @@ Sg::Application.routes.draw do
 
   resources :gists
 
+  match 'papers_metadata' => 'papers#metadata'
+
   root :to => 'pages#index'
 
   namespace :admin do

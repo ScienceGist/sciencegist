@@ -16,6 +16,7 @@ class GistsController < ApplicationController
   def create
     @gist = Gist.new(params[:gist])
     @gist.user = current_user
+
     @gist.save
     redirect_to paper_path(@gist.paper_id)
   end
@@ -32,5 +33,9 @@ class GistsController < ApplicationController
     end
     @gist = Gist.new
     @gist.build_paper
+  end
+
+  def metadata
+
   end
 end
