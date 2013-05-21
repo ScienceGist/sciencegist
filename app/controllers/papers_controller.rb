@@ -6,7 +6,6 @@ class PapersController < ApplicationController
   def metadata
     PaperMetadata.doi_username = 'juretriglav@gmail.com'
     result = PaperMetadata.metadata_for(params[:q])
-    binding.pry
     render :json => result
   end
 end
