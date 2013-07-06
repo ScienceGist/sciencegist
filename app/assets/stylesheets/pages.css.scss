@@ -13,22 +13,16 @@ body {
 }
 
 html {
-  font: 125%/1.5 freight-sans-pro, serif;
+  font: 125%/1.5 'Open Sans', serif;
 }
 
 // First page add gist box
 .add_gist_box {
-  .title {
-    font-family: freight-sans-pro;
-  }
-  p {
-    font-family: freight-text-pro;
-  }
   font-size: 20px;
   text-align: center;
-  margin-top: 120px;
+  margin-top: 24px;
   background: white;
-  padding: 72px;
+  padding: 24px;
   @include nice_shadow;
 }
 
@@ -43,8 +37,8 @@ html {
 }
 
 .btn {
-  border: none;
-  border-radius: 0;
+  //border: none;
+  //border-radius: 0;
   background: $default_button_color;
 }
 
@@ -75,7 +69,6 @@ a:hover {
 .header-launch {
   .brand {
     margin-top: 0px;
-    font-family: freight-text-pro;
     font-size: 24px;
     font-weight: 400;
     font-style: italic;
@@ -101,6 +94,11 @@ a:hover {
   background: $header_color;
   @include box-shadow($shadow_color 0px 2px 2px);
   color: white;
+}
+
+.center.logo {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .new_user {
@@ -130,4 +128,12 @@ a:hover {
     }
     text-align: right;
   }
+}
+
+.center {
+  text-align: center;
+}
+
+.btn.search {
+  width: 150px;
 }

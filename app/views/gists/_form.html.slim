@@ -1,10 +1,10 @@
 p
-  strong Identifier (DOI or arXiv)
-  |First, tell us which paper this gist is for, by providing it's identifier:
+  strong Identifier (DOI or arXiv)&nbsp;
+  | First, tell us which paper this gist is for, by providing it's identifier:
 = f.simple_fields_for :paper do |p|
   = p.input :identifier, label: false, placeholder: 'DOI (e.g. “doi: 10.1021/ac1014832”) or arXiv identifier (e.g. “arXiv:1301.7746”)'
 p
-  strong Gist
+  strong Gist&nbsp;
   | Describe in simple terms what the paper is about:
 = f.input :content, label: false, placeholder: 'The Gist'
 .submit

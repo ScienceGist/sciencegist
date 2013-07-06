@@ -1,18 +1,21 @@
-h1 Search gists
-= form_tag(papers_path, :method => 'get', class: 'form-search') do
-  div.input-append
-    = text_field_tag(:search, params[:search], class: "span2 input-medium search-query")
-    = button_tag("Search", type: 'submit', class: "btn")
+.center.logo= image_tag 'logo.png'
 
-h1 Recent gists
-- @gists.each do |gist|
-  = render 'gists/gist', gist: gist
+.row
+.span6.offset3
+  = form_tag(papers_path, :method => 'get', class: 'form-search') do
+    div.input-append
+      = text_field_tag(:search, params[:search], class: "span4 input-medium search-query", placeholder: 'Search papers by DOI or title')
+      = button_tag("Search", type: 'submit', class: "btn search")
+
+/ h1 Recent gists
+/ - @gists.each do |gist|
+/   = render 'gists/gist', gist: gist
 
 .row
   .span6.offset3
     .add_gist_box
       div.welcome
-        p.title BRIDGE THE SCIENCE GAP AND SPEED UP THE WORLD’S RESEARCH
+        p.title BRIDGE THE SCIENCE GAP
         p Welcome to the ScienceGist community where we respect and nurture the art of simplifiying very complex concepts into clear and concise ideas. Our source of complexity are scientific papers. Click “Add gist” below to join us.
       .add_gist
         = link_to '<i class="icon-plus"></i>Add gist'.html_safe, new_gist_path,
