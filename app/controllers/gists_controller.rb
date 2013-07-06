@@ -1,10 +1,6 @@
 class GistsController < ApplicationController
   before_filter :authenticate_user!, :only => [:update, :destroy, :edit]
 
-  def index
-
-  end
-
   def show
 
   end

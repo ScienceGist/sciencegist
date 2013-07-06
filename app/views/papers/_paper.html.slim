@@ -1,0 +1,8 @@
+.row
+  .span12
+    .gist
+      h2 #{paper.title}
+      div.info
+        span.paper_author Paper author: #{paper.author}
+        - paper.gists.each do |gist|
+          = render 'gists/gist', gist: gist

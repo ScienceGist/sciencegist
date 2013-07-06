@@ -10,6 +10,7 @@ Sg::Application.routes.draw do
   match '', to: 'blog#index', constraints: lambda { |r| r.subdomain.present? && r.subdomain != 'www' }
 
   resources :gists
+  resources :papers
 
   match 'papers_metadata' => 'papers#metadata'
 

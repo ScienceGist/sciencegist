@@ -1,3 +1,9 @@
+h1 Search gists
+= form_tag(papers_path, :method => 'get', class: 'form-search') do
+  div.input-append
+    = text_field_tag(:search, params[:search], class: "span2 input-medium search-query")
+    = button_tag("Search", type: 'submit', class: "btn")
+
 h1 Recent gists
 - @gists.each do |gist|
   = render 'gists/gist', gist: gist
