@@ -8,9 +8,10 @@ GIT
 
 GIT
   remote: git://github.com/jure/paper_metadata.git
-  revision: 8309befb193dcb1745c3b42ae5c85719de8b5b13
+  revision: d9401307af56a77f36496155f4f248336b263da8
+  branch: new_doi
   specs:
-    paper_metadata (0.0.2)
+    paper_metadata (0.0.3)
       nokogiri (= 1.5.6)
 
 GEM

@@ -18,7 +18,7 @@ gem 'capistrano'
 gem 'capistrano-unicorn'
 gem 'activerecord-postgres-hstore', github: 'engageis/activerecord-postgres-hstore'
 gem 'kramdown'
-gem 'paper_metadata', github: 'jure/paper_metadata'
+gem 'paper_metadata', github: 'jure/paper_metadata', branch: 'new_doi'
 
 # Gems used only for assets and not required
 # in production environments by default.
