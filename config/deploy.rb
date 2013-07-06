@@ -1,7 +1,7 @@
 set :application, "sg"
 set :scm, :git
 set :repository,  "git@github.com:jure/tsgb.git"
-set :branch, "master"
+set :branch, "paper_and_gist"
 set :use_sudo, false
 set :ssh_options, { :forward_agent => true }
 set :rbenv_ruby_version, "ruby-2.0.0-p0"
