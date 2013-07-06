@@ -7,6 +7,12 @@ div.span12 .gist_container {
   @include nice_shadow;
 }
 
+.papers_show .whatever .gist {
+  background: $box_color;
+  @include nice_shadow;
+  padding: 12px;
+}
+
 div.span12 .gists {
   padding: 12px;
 }
