@@ -1,8 +1,10 @@
-.row
+.row.paper_container
   .span12
-    .gist
-      h3 #{paper.title}
-      div.info
-        span.paper_author Paper author: #{paper.authors}
-        - paper.gists.each do |gist|
+    .gist_container
+      .paper
+        h3 #{paper.title}
+        div.info
+          span.paper_author Authors: #{paper.authors}
+      .gists
+        - paper.gists.order('score desc').each do |gist|
           = render 'gists/gist_in_search', gist: gist

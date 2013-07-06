@@ -2,12 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.span12 .gist {
+div.span12 .gist_container {
   background: $box_color;
   @include nice_shadow;
-  margin-top: 20px;
-  padding: 6px;
+}
 
+div.span12 .gists {
+  padding: 12px;
+}
+div.span12 .paper {
+  padding: 2px 12px 12px 12px;
+  background-color: lighten($color, 30);
   .info {
     font-style: italic;
     .paper_author {
@@ -17,7 +22,18 @@ div.span12 .gist {
       margin-right: 12px;
     }
   }
-  .content {
-    font-family: 'Open Sans', sans-serif;
-  }
+}
+
+.gist_author:not(:first-child) {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px #eee solid;
+}
+
+.gist_author:last-child {
+  margin-bottom: 1em;
+}
+
+.paper_container {
+  margin-bottom: 1em;
 }

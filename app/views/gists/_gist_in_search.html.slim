@@ -1,7 +1,10 @@
-.row
+.row.gist_author
   .span12
-    span.gist_author Gist author: #{gist.author_name}
-    span.created_at Created: #{distance_of_time_in_words_to_now(gist.created_at)} ago
+    div
+      span
+        strong Gist author:&nbsp;
+        = gist.author_name
+      span.created_at &nbsp;Created: #{distance_of_time_in_words_to_now(gist.created_at)} ago
     div.content
       | <strong>Gist:&nbsp;</strong>
       == gist.content_html
@@ -9,6 +12,6 @@
       span.score id="gist_#{gist.id}"
         = gist.score
       | &nbsp;
-      = link_to 'Vote up', vote_up_path(id: gist.id), class: 'vote_up'
-      | &nbsp;
-      = link_to 'Vote down', vote_down_path(id: gist.id), class: 'vote_down'
+      = link_to 'I get it', vote_up_path(id: gist.id), class: 'vote_up'
+      | &nbsp;/&nbsp;
+      = link_to "I don't get it", vote_down_path(id: gist.id), class: 'vote_down'

@@ -4,6 +4,9 @@
       h2 #{gist.paper.title}
       div.info
         span.paper_author Paper author: #{gist.paper.authors}
-        span.gist_author Gist author: #{gist.author_name}
+        span.gist_author
+          strong Gist author:
+          | &nbsp;
+          = gist.author_name
         span.created_at Created: #{distance_of_time_in_words_to_now(gist.created_at)} ago
       div.content== gist.content_html

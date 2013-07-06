@@ -10,7 +10,6 @@
             | Hi, #{current_user.email}!
             = link_to 'Log out', destroy_user_session_path, :method => :delete
         = link_to 'Add gist', new_gist_path
-        = link_to 'New', gists_path
 
 
 
