@@ -1,3 +1,4 @@
+require "capistrano-rbenv"
 set :application, "sg"
 set :scm, :git
 set :repository,  "git@github.com:jure/tsgb.git"
