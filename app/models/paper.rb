@@ -11,4 +11,12 @@ class Paper < ActiveRecord::Base
       'Unknown'
     end
   end
+
+  def authors
+    if metadata && metadata['authors']
+      metadata['authors']
+    else
+      'Unknown'
+    end
+  end
 end

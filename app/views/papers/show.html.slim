@@ -1,4 +1,6 @@
-h1 Title #{@paper.title}
+h2 #{@paper.title}
+h5= @paper.metadata['authors']
+h5= @paper.metadata['journal']
 h2 Gists
 - @paper.gists.each_with_index do |gist, i|
-  = render 'gist', gist: gist, i: i
+  = render 'gist', gist: gist, i: i + 1

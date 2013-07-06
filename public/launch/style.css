@@ -68,7 +68,7 @@ a {
   }
 
 html {
-  font: 125%/1.5 freight-text-pro, serif;
+  font: 125%/1.5 'Open Sans', serif;
   color: #222;
   -webkit-font-smoothing: antialiased;
 }
@@ -80,15 +80,15 @@ html {
   }
 
 .freight {
-  font-family: freight-text-pro, serif;
+  font-family: 'Open Sans', serif;
 }
 
 .freight .subtitle, .freight .sans, .freight small {
-  font-family: freight-sans-pro, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .site-footer {
-  font-family: freight-sans-pro, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .gist {

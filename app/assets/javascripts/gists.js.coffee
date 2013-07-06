@@ -10,6 +10,11 @@ $ ->
       data:
         q: that.value
 
-      success: (choices) ->
-        debugger;
+      success: (data) ->
+        $('#title').html(data.title)
+        $('#authors').html(data.authors)
+        $('#journal').html('(' + data.journal + ')')
+        $('#hidden_title').val(data.title)
+        $('#hidden_authors').val(data.authors)
+        $('#hidden_journal').val(data.journal)
 

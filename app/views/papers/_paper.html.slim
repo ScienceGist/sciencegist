@@ -3,6 +3,6 @@
     .gist
       h2 #{paper.title}
       div.info
-        span.paper_author Paper author: #{paper.author}
+        span.paper_author Paper author: #{paper.authors}
         - paper.gists.each do |gist|
-          = render 'gists/gist', gist: gist
+          = render 'gists/gist_in_search', gist: gist

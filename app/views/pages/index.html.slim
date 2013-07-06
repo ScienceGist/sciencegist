@@ -1,15 +1,6 @@
 .center.logo= image_tag 'logo.png'
 
-.row
-.span6.offset3
-  = form_tag(papers_path, :method => 'get', class: 'form-search') do
-    div.input-append
-      = text_field_tag(:search, params[:search], class: "span4 input-medium search-query", placeholder: 'Search papers by DOI or title')
-      = button_tag("Search", type: 'submit', class: "btn search")
-
-/ h1 Recent gists
-/ - @gists.each do |gist|
-/   = render 'gists/gist', gist: gist
+= render 'search_form'
 
 .row
   .span6.offset3

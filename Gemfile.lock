@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/jure/paper_metadata.git
-  revision: d9401307af56a77f36496155f4f248336b263da8
+  revision: 321edbe2e97f989e47b6aef60a58a6c333b0cc6a
   branch: new_doi
   specs:
     paper_metadata (0.0.3)

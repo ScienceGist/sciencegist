@@ -36,9 +36,12 @@ html {
   }
 }
 
+.no-border {
+  border: none;
+  border-radius: 0;
+}
+
 .btn {
-  //border: none;
-  //border-radius: 0;
   background: $default_button_color;
 }
 

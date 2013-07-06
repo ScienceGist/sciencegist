@@ -1,11 +1,19 @@
+h2#title
+h5#authors
+h5#journal
+
 p
   strong Identifier (DOI or arXiv)&nbsp;
   | First, tell us which paper this gist is for, by providing it's identifier:
 = f.simple_fields_for :paper do |p|
+  = p.simple_fields_for :metadata do |m|
+    = m.hidden_field :authors, id: 'hidden_authors'
+    = m.hidden_field :journal, id: 'hidden_journal'
+  = p.hidden_field :title, id: 'hidden_title'
   = p.input :identifier, label: false, placeholder: 'DOI (e.g. “doi: 10.1021/ac1014832”) or arXiv identifier (e.g. “arXiv:1301.7746”)'
 p
   strong Gist&nbsp;
   | Describe in simple terms what the paper is about:
 = f.input :content, label: false, placeholder: 'The Gist'
 .submit
-  = f.button :submit, :class => 'btn btn-large'
+  = f.button :submit, :class => 'btn btn-large no-border'

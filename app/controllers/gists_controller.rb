@@ -10,6 +10,7 @@ class GistsController < ApplicationController
   end
 
   def create
+    binding.pry
     @gist = Gist.new(params[:gist])
     @gist.user = current_user
 
@@ -29,9 +30,5 @@ class GistsController < ApplicationController
     end
     @gist = Gist.new
     @gist.build_paper
-  end
-
-  def metadata
-
   end
 end

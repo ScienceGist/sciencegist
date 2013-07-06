@@ -8,6 +8,6 @@
       = render 'users/form', f: u
     p.small If you don’t want to join, you can still create new gists, but they will be considered anonymous and you won’t be entitled to the sweat of your brow.
 .new_gist
-  h1 Add a new gist
+  h3 Add a new gist
   = simple_form_for @gist do |f|
     = render 'form', f: f
