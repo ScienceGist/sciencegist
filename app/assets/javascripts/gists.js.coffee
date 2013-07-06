@@ -18,3 +18,16 @@ $ ->
         $('#hidden_authors').val(data.authors)
         $('#hidden_journal').val(data.journal)
 
+$ ->
+  $('.vote_up').on "click", (e) ->
+    e.preventDefault()
+    that = this
+    $.get that.href, (data) ->
+      $('#gist_' + data.id).html(data.score)
+
+$ ->
+  $('.vote_down').on "click", (e) ->
+    e.preventDefault()
+    that = this
+    $.get that.href, (data) ->
+     $('#gist_' + data.id).html(data.score)

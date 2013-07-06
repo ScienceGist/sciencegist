@@ -12,6 +12,9 @@ Sg::Application.routes.draw do
   resources :gists
   resources :papers
 
+  match 'vote_up' => 'gists#vote_up'
+  match 'vote_down' => 'gists#vote_down'
+
   match 'papers_metadata' => 'papers#metadata'
 
   root :to => 'pages#index'

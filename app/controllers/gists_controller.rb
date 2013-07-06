@@ -9,9 +9,24 @@ class GistsController < ApplicationController
 
   end
 
+  def vote_up
+    @gist = Gist.find(params[:id])
+    @gist.score = @gist.score + 1
+    @gist.save
+    render :json => @gist
+  end
+
+  def vote_down
+    @gist = Gist.find(params[:id])
+    @gist.score = @gist.score - 1
+    @gist.save
+    render :json => @gist
+  end
+
   def create
-    binding.pry
     @gist = Gist.new(params[:gist])
+    paper = Paper.find_by_identifier(params[:gist][:paper_attributes][:identifier])
+    @gist.paper = paper if paper
     @gist.user = current_user
 
     @gist.save
@@ -19,9 +34,11 @@ class GistsController < ApplicationController
   end
 
   def destroy
+
   end
 
   def edit
+
   end
 
   def new
