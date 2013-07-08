@@ -7,15 +7,10 @@ doctype html
 == "<!--[if (gt IE 9)|!(IE)]><!--> <html lang=\"en\"> <!--<![endif]-->"
 head
   meta charset="utf-8"
-
-  / Uncomment to make IE8 render like IE7
-  / meta http-equiv="X-UA-Compatible" content="IE=7"
-
   / Set the viewport width to device width for mobile
   meta name="viewport" content="width=device-width, initial-scale=1.0"
 
   title= content_for?(:title) ? yield(:title) : "Untitled"
-
 
   = stylesheet_link_tag "application"
   = javascript_include_tag "vendor/custom.modernizr"
@@ -24,11 +19,10 @@ head
 
 body*{:class => "#{controller.controller_name}_#{controller.action_name}" }
   = render :partial => 'layouts/header'
-  .container
-    .row
-      .span12
-        - if flash[:notice]
-          .notice= notice
-        - if flash[:alert]
-          .alert= alert
-        = yield
+  .row
+    .large-12.columns
+      - if flash[:notice]
+        .alert-box= notice
+      - if flash[:alert]
+        .alert-box.alert= alert
+      = yield

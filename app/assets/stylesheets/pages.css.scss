@@ -3,19 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body {
-  background: $background_color;
-  font-size: inherit;
-  font-family: inherit;
-  font: inherit;
-  color: #222;
-  -webkit-font-smoothing: antialiased;
-}
-
-html {
-  font: 125%/1.5 'Open Sans', serif;
-}
-
 // First page add gist box
 .add_gist_box {
   font-size: 20px;
@@ -27,12 +14,10 @@ html {
 }
 
 .add_gist {
-  a.btn {
-    margin-top: 20px;
-    background: $color_1;
-    border: none;
-    border-radius: 0;
-
+  .btn {
+    @include button-base;
+    @include button-size;
+    @include button-style($color, 0, false);
   }
 }
 
