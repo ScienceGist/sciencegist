@@ -32,6 +32,13 @@ set :user, 'deploy'
 set :deploy_to,   "/home/#{user}/apps/#{application}/"
 set :current_path, File.join(deploy_to, current_dir)
 
+namespace :db do
+  task :db_config, :except => { :no_release => true }, :role => :app do
+    run "cp -f #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+  end
+end
+after "deploy:finalize_update", "db:db_config"
+
 require "bundler/capistrano"
 require "capistrano-unicorn"
 
