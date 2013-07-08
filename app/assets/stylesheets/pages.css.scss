@@ -13,12 +13,11 @@
   @include nice_shadow;
 }
 
-.add_gist {
-  .btn {
-    @include button-base;
-    @include button-size;
-    @include button-style($color, 0, false);
-  }
+
+.btn {
+  @include button-base;
+  @include button-size;
+  @include button-style($color, 0, false);
 }
 
 .no-border {
