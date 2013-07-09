@@ -39,6 +39,8 @@ namespace :db do
 end
 after "deploy:finalize_update", "db:db_config"
 
+after 'deploy:restart', 'unicorn:reload'
+
 require "bundler/capistrano"
 require "capistrano-unicorn"
 
