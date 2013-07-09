@@ -12,19 +12,18 @@ nav.top-bar
   section class="top-bar-section"
     ul.right
       li.divider
-      li
-        - if current_user
-          = link_to 'Your gists', gists_path
-        - else
-          = link_to "Sign up", user_registration_path
-          = link_to "Sign in", user_session_path
+      li= link_to 'Add gist', new_gist_path
+      - if current_user      
+        li.divider
+        li= link_to 'Your gists', gists_path
+      - else
+        li.divider
+        li= link_to "Sign up", user_registration_path
+        li.divider
+        li= link_to "Sign in", user_session_path
       - if current_user
         li.divider
         li
           = link_to "Log out", destroy_user_session_path, method: 'delete'
-      li.divider
-      li= link_to 'Add gist', new_gist_path
-
-
 
 

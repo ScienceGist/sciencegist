@@ -1,7 +1,7 @@
 .row
-  .span2
+  .large-4.columns
     = f.input :email, label: false, placeholder: 'E-mail'
-  .span2
+  .large-4.columns
     = f.input :password, label: false, placeholder: 'Password'
-  .span2
-    = f.button :submit, :value => 'Join'
+  .large-4.columns
+    = f.button :submit, :value => 'Join', class: 'btn prefix'

@@ -11,12 +11,9 @@ $ ->
         q: that.value
 
       success: (data) ->
-        $('#title').html(data.title)
-        $('#authors').html(data.authors)
-        $('#journal').html('(' + data.journal + ')')
-        $('#hidden_title').val(data.title)
-        $('#hidden_authors').val(data.authors)
-        $('#hidden_journal').val(data.journal)
+        $('#title').val(data.title)
+        $('#authors').val(data.authors)
+        $('#journal').val(data.journal)
 
 $ ->
   $('.vote_up').on "click", (e) ->

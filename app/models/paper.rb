@@ -4,6 +4,11 @@ class Paper < ActiveRecord::Base
 
   has_many :gists
 
+  def metadata
+    OpenStruct.new(super)
+  end
+
+
   def author
     if metadata && metadata.author
       metadata.author
@@ -13,10 +18,10 @@ class Paper < ActiveRecord::Base
   end
 
   def authors
-    if metadata && metadata['authors']
-      metadata['authors']
+    if metadata && metadata.authors
+      metadata.authors
     else
-      'Unknown'
+    'Unknown'
     end
   end
 end

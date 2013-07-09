@@ -1,6 +1,5 @@
-
 - unless current_user
-  .new_user
+  .new_user_promo
     h1 Hi there!
     p Looks like you’re not our member yet, fill this out to join on the spot:
     = simple_form_for @user, :html => { :class => "form-inline" },
@@ -10,4 +9,4 @@
 .new_gist
   h3 Add a new gist
   = simple_form_for @gist do |f|
-    = render 'form', f: f
+    = render 'form', f: f, paper: @gist.paper

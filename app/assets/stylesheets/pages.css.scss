@@ -5,30 +5,46 @@
 
 // First page add gist box
 .add_gist_box {
-  font-size: 20px;
   text-align: center;
-  margin-top: 24px;
+  margin: 1em 0;
   background: white;
-  padding: 24px;
+  padding: 2.25em 1em 1em;
   @include nice_shadow;
 }
 
-
+// Buttons
 .btn {
+  border: none;
+
   @include button-base;
   @include button-size;
   @include button-style($color, 0, false);
+  border: 1px solid rgba($color, 0);
 }
 
-.no-border {
-  border: none;
-  border-radius: 0;
+.btn.prefix {
+  display: block;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  font-size: 0.875em;
+  height: 2.3125em;
+}
+.btn.prefix {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+  line-height: 2.125em;
 }
 
 .btn {
-  background: $default_button_color;
-}
 
+}
 .small {
   font-size: 16px;
   font-size: .8rem;
@@ -84,11 +100,15 @@ a:hover {
 }
 
 .center.logo {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
-.new_user {
+.top-bar .logo {
+  position: relative;
+  top: 4px;
+}
+.new_user_promo {
   padding: 24px;
   margin-top: 12px;
   @include nice_shadow;
@@ -97,7 +117,8 @@ a:hover {
     width: 100%;
   }
   .btn {
-    height: 30px;
+    height: 32px;
+    line-height: 8px;
   }
 }
 
@@ -121,6 +142,3 @@ a:hover {
   text-align: center;
 }
 
-.btn.search {
-  width: 214px;
-}

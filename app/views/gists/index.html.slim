@@ -1,2 +1,7 @@
-h1 Gists#index
-p Find me in app/views/gists/index.html.slim
+h1 Your gists
+- if @gists.present?
+  - @gists.each do |gist|
+    = render 'gists/gist', gist: gist
+- else
+  p No gists yet
+  = link_to 'Add gist', new_gist_path, :class => 'btn'

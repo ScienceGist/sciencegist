@@ -1,12 +1,19 @@
 .row
-  .span12
-    .gist
-      h2 #{gist.paper.title}
+  .large-12.columns
+    .gist.panel
+      h4 #{gist.paper.title}
       div.info
-        span.paper_author Paper author: #{gist.paper.authors}
-        span.gist_author
+        div.paper_author Authors: #{gist.paper.authors}
+        div.gist_author
           strong Gist author:
           | &nbsp;
           = gist.author_name
-        span.created_at Created: #{distance_of_time_in_words_to_now(gist.created_at)} ago
-      div.content== gist.content_html
+          span.created_at &nbsp;(Created: #{distance_of_time_in_words_to_now(gist.created_at)} ago)
+      div.content
+        span
+          strong Gist:&nbsp;
+        == gist.content_html
+      ul.inline-list.actions
+        - if gist.user == current_user
+          li= link_to 'Edit', edit_gist_path(gist.id)
+        li=link_to 'Link', gist_path(gist.id)
