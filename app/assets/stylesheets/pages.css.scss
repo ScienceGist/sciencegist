@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 // First page add gist box
 .add_gist_box {
   text-align: center;
@@ -142,3 +141,6 @@ a:hover {
   text-align: center;
 }
 
+.alert-box {
+  border-color: rgba($color, 0);
+}

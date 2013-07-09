@@ -18,7 +18,7 @@ nav.top-bar
         li= link_to 'Your gists', gists_path
       - else
         li.divider
-        li= link_to "Sign up", user_registration_path
+        li= link_to "Sign up", new_user_registration_path
         li.divider
         li= link_to "Sign in", user_session_path
       - if current_user
