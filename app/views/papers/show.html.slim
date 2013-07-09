@@ -4,4 +4,4 @@ div.whatever
   h5= @paper.metadata['journal']
   h2 Gists
   - @paper.gists.each_with_index do |gist, i|
-    = render 'gist', gist: gist, i: i + 1
+    = render 'gists/gist', gist: gist, i: i + 1

@@ -4,7 +4,7 @@
       .paper
         h3 #{paper.title}
         div.info
-          span.paper_authors Authors: #{paper.authors}
+          p.paper_authors Authors: #{paper.authors}
       .gists
         - paper.gists.order('score desc').each do |gist|
           = render 'gists/gist_in_search', gist: gist
