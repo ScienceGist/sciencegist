@@ -12,5 +12,8 @@
       .add_gist
         = link_to 'Add gist', new_gist_path, :class => 'btn'
 .row
-  .large-12.columns
-    .contact= link_to 'Contact us', 'mailto:info@sciencegist.com'
+  .large-6.large-offset-3.columns
+    ul.small-block-grid-3.contact
+      li= link_to 'Contact us', 'mailto:info@sciencegist.com'
+      li= link_to 'GitHub', 'https://github.com/jure/sciencegist'
+      li= link_to 'Twitter', 'https://www.twitter.com/sciencegist'
