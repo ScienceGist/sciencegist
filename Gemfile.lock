@@ -37,6 +37,7 @@ GEM
       i18n (= 0.6.1)
       multi_json (~> 1.0)
     arel (3.0.2)
+    backports (3.3.3)
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
     capistrano (2.15.5)
@@ -67,6 +68,7 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    descendants_tracker (0.0.1)
     devise (2.2.1)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -77,6 +79,20 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fssm (0.2.9)
+    grape (0.5.0)
+      activesupport
+      builder
+      hashie (>= 1.2.0)
+      multi_json (>= 1.3.2)
+      multi_xml (>= 0.5.2)
+      rack (>= 1.3.0)
+      rack-accept
+      rack-mount
+      virtus
+    grape-entity (0.3.0)
+      activesupport
+      multi_json (>= 1.3.2)
+    hashie (2.0.5)
     highline (1.6.19)
     hike (1.2.3)
     i18n (0.6.1)
@@ -94,6 +110,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     multi_json (1.7.7)
+    multi_xml (0.5.4)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -116,8 +133,12 @@ GEM
     psych (1.3.4)
     pygmentize (0.0.3)
     rack (1.4.5)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-mount (0.8.3)
+      rack (>= 1.0.0)
     rack-ssl (1.3.3)
       rack
     rack-test (0.6.2)
@@ -194,6 +215,9 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    virtus (0.5.5)
+      backports (~> 3.3)
+      descendants_tracker (~> 0.0.1)
     warden (1.2.1)
       rack (>= 1.0)
     zurb-foundation (4.0.9)
@@ -210,6 +234,8 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails
   devise
+  grape
+  grape-entity
   jquery-rails
   kramdown
   paper_metadata

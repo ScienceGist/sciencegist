@@ -19,6 +19,8 @@ gem 'capistrano-rbenv'
 gem 'activerecord-postgres-hstore', github: 'engageis/activerecord-postgres-hstore'
 gem 'kramdown'
 gem 'paper_metadata'
+gem 'grape'
+gem 'grape-entity'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,4 +1,9 @@
+require 'grape'
+#require 'api_v1'
+
 Sg::Application.routes.draw do
+  
+  mount Sg::ApiV1 => '/'
 
   devise_for :users
 
