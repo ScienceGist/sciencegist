@@ -2,12 +2,13 @@
   .large-12.columns
     div.panel
       div
-        span
-          strong Gist author:&nbsp;
-          = gist.author_name
-        span.created_at &nbsp;Created: #{distance_of_time_in_words_to_now(gist.created_at)} ago
+        p
+          span
+            strong Gist author:&nbsp;
+            = gist.author_name
+          span.created_at &nbsp;Created: #{distance_of_time_in_words_to_now(gist.created_at)} ago
       div.content
-        | <strong>Gist:&nbsp;</strong>
+        p <strong>Gist:&nbsp;</strong>
         == gist.content_html
       div
         span.score id="gist_#{gist.id}"
