@@ -1,5 +1,6 @@
 require 'grape'
-#require 'api_v1'
+require 'api_v1'
+require 'entities'
 
 Sg::Application.routes.draw do
   

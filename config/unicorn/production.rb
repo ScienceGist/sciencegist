@@ -29,8 +29,8 @@ if env == "production"
   user 'deploy', 'staff'
   shared_path = "/home/deploy/apps/sg/shared"
 
-  stderr_path "#{shared_path}/log/unicorn.stderr.log"
-  stdout_path "#{shared_path}/log/unicorn.stdout.log"
+  stderr_path "/home/deploy/apps/sg/shared/log/unicorn.stderr.log"
+  stdout_path "/home/deploy/apps/sg/shared/log/unicorn.stdout.log"
 end
 
 before_fork do |server, worker|
