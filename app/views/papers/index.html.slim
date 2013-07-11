@@ -1,4 +1,10 @@
 br
 = render 'pages/search_form'
-- @papers.each do |paper|
-  = render 'paper', paper: paper
+- if @papers.present?
+  - @papers.each do |paper|
+    = render 'paper', paper: paper
+- else
+  p.center
+    | No papers with that title or DOI have been gisted.
+  p.center
+    = link_to 'Add gist', new_gist_path, :class => 'btn'
