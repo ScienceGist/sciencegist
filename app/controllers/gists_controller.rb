@@ -31,8 +31,8 @@ class GistsController < ApplicationController
   end
 
   def create
-    @gist = Gist.new(params[:gist])
-    paper = Paper.find_by_identifier(params[:gist][:paper_attributes][:identifier])
+    @gist = Gist.new(gist_params[:gist])
+    paper = Paper.find_by_identifier(gist_params[:gist][:paper_attributes][:identifier])
     @gist.paper = paper if paper
     @gist.user = current_user
 
@@ -54,5 +54,13 @@ class GistsController < ApplicationController
     end
     @gist = Gist.new
     @gist.build_paper
+    if params[:identifier]
+      @gist.paper = Paper.find_by_identifier(params[:identifier])
+    end
+  end
+
+  private
+  def gist_params
+    params.permit(:id, gist: [:id, {paper_attributes: [:identifier, :title, {metadata: [:authors, :journal]}]}, :content])
   end
 end

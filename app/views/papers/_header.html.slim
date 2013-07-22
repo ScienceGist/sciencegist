@@ -1,0 +1,4 @@
+h1.paper_title #{paper.title}
+h5.paper_metadata 
+  span #{paper.metadata['authors']} (#{paper.metadata['journal']})&nbsp;
+  = link_to paper.identifier, paper.url

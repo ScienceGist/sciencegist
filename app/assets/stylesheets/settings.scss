@@ -2,10 +2,10 @@ $body-bg: #fff;
 $body-font-family: 'Open Sans', sans-serif;
 $primary-color: $color;
 $header-font-family: "Open Sans", sans-serif;
-$header-font-weight: bold;
+$header-font-weight: 600;
 $panel-bg: #fff;
-$topbar-title-weight: bold;
-$topbar-link-weight: bold;
+$topbar-title-weight: 600;
+$topbar-link-weight: 600;
 
 $topbar-bg: #fff;
 
@@ -43,5 +43,4 @@ $input-focus-border-color: $color;
 $input-border-style: solid;
 $input-border-width: 1px;
 $input-box-shadow: none;
-
-$global-radius: 20px;
+$button-font-weight: 600;

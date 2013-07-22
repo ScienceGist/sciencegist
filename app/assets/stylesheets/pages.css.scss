@@ -8,41 +8,13 @@
   margin: 1em 0;
   background: white;
   padding: 2.25em 1em 1em;
+
+  .add_gist {
+    margin: 2em 0 2em 0;
+  }
 }
 
-// Buttons
-.btn {
-  border: none;
 
-  @include button-base;
-  @include button-size;
-  @include button-style($color, 0, false);
-  border: 1px solid rgba($color, 0);
-}
-
-.btn.prefix {
-  display: block;
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  border-style: solid;
-  border-width: 1px;
-  overflow: hidden;
-  font-size: 0.875em;
-  height: 2.3125em;
-}
-.btn.prefix {
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  text-align: center;
-  line-height: 2.125em;
-}
-
-.btn {
-
-}
 .small {
   font-size: 16px;
   font-size: .8rem;
@@ -150,10 +122,6 @@ a {
   font-size: 12px;
 }
 
-.separator {
-  height: 3px;
-  background-color: $color;
-}
 .example_container {
   padding: 2em 0;
   a {
@@ -163,12 +131,12 @@ a {
   h3 {
     color: black;
   }
-  background-color: lighten($color, 20%);
+  background-color: lighten($color, 50%);
   color: black;
   .gist, .abstract {
     padding: 1.5em;
     margin: 2em 0;
-    h3 {
+    h4 {
       margin-top: 0;
     }
     p {

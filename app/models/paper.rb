@@ -25,4 +25,14 @@ class Paper < ActiveRecord::Base
     'Unknown'
     end
   end
+
+  def url
+    if identifier =~ /^doi:\s*(.*)/i
+      "http://dx.doi.org/#{$1}"
+    elsif identifier =~ /^arXiv:\s*(.*)/i
+      "http://arxiv.org/abs/#{$1}"
+    else
+      nil
+    end
+  end
 end

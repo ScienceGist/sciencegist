@@ -22,6 +22,7 @@ $ ->
     $.get that.href, (data) ->
       $('#gist_' + data.id).html(data.score)
 
+
 $ ->
   $('.vote_down').on "click", (e) ->
     e.preventDefault()

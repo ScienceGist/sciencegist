@@ -1,18 +1,15 @@
 .row
   .large-12.columns
     .gist.panel
-      h4 #{gist.paper.title}
-      div.info
-        p.paper_author Authors: #{gist.paper.authors}
-        p.gist_author
-          strong Gist author:
-          | &nbsp;
-          = gist.author_name
-          span.created_at &nbsp;(Created: #{distance_of_time_in_words_to_now(gist.created_at)} ago)
-      div.content
-        p
-          strong Gist:&nbsp;
-          == gist.content_html
+      - if !defined?(display_title) || display_title
+        = render 'papers/header', paper: gist.paper
+      p.gist_author
+        strong Gist author:
+        | &nbsp;
+        = gist.author_name
+        span.created_at &nbsp;(Created: #{distance_of_time_in_words_to_now(gist.created_at)} ago)
+      p.content
+        == gist.content_html
       ul.inline-list.actions
         - if current_user && gist.user == current_user
           li= link_to 'Edit', edit_gist_path(gist.id)
