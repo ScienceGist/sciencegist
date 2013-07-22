@@ -13,15 +13,15 @@ Sg::Application.routes.draw do
 
   get '/p/:id' => 'papers#show', :as => 'paper'
 
-  match '', to: 'blog#index', constraints: lambda { |r| r.subdomain.present? && r.subdomain != 'www' }
+  match '', to: 'blog#index', constraints: lambda { |r| r.subdomain.present? && r.subdomain != 'www' }, via: [:get]
 
   resources :gists
   resources :papers
 
-  match 'vote_up' => 'gists#vote_up'
-  match 'vote_down' => 'gists#vote_down'
+  match 'vote_up' => 'gists#vote_up', via: [:get]
+  match 'vote_down' => 'gists#vote_down', via: [:get]
 
-  match 'papers_metadata' => 'papers#metadata'
+  match 'papers_metadata' => 'papers#metadata', via: [:get]
 
   root :to => 'pages#index'
 

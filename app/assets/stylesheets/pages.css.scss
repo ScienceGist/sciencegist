@@ -94,7 +94,7 @@ a:hover {
   line-height: 48px;
   height: 48px;
   background: $header_color;
-  @include box-shadow($shadow_color 0px 2px 2px);
+  box-shadow: 0px 2px 2px $shadow_color;
   color: white;
 }
 
