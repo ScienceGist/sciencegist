@@ -6,7 +6,7 @@ class IdentifiersController < ApplicationController
       redirect_to paper_path(@paper.id)
     else
       metadata = PaperMetadata.metadata_for(@doi)
-      if metadata
+      unless metadata[:status] == :NODOI
         @paper = Paper.create!(title: metadata[:title], 
           identifier: @doi, 
           journal: metadata[:journal],
@@ -18,13 +18,12 @@ class IdentifiersController < ApplicationController
 
   def arxiv
     @arxiv = "arXiv: " + params[:identifiers]
-    @arxiv += '.' + params[:format]
     @paper = Paper.find_by_identifier(@arxiv)
     if @paper
       redirect_to paper_path(@paper.id)
     else
       metadata = PaperMetadata.metadata_for(@arxiv)
-      if metadata
+      unless metadata.blank?
         metadata[:author] = metadata[:author].split("\n").map do |a| a.strip if a.strip.present?
         end.compact.join(', ')
         @paper = Paper.create!(title: metadata[:title], 
