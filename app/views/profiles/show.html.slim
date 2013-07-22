@@ -1,3 +1,20 @@
-h1 Profiles
-
-This is user #{@user.email}
+.row
+  .large-12.columns 
+    h1 Profile
+    p= image_tag @user.gravatar_url
+    p This is user #{@user.email}'s profile. This user has #{@user.karma} points, which they got by writing #{@user.gists.size} gists.
+    p 
+      | User wrote gists:
+      ul
+        - @user.gists.order('cached_votes_score desc').each do |gist|
+          li #{gist.paper.title} (#{gist.cached_votes_score})
+    p
+      | "Got/understood" gists:
+      ul
+        - @user.find_up_voted_items.each do |gist|
+          li #{gist.paper.title} (#{gist.cached_votes_score})
+    p
+      | Didn't get gists:
+      ul
+        - @user.find_down_voted_items.each do |gist|
+          li #{gist.paper.title} (#{gist.cached_votes_score})

@@ -10,4 +10,14 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   has_many :gists
   
+  acts_as_voter
+
+  def karma
+    gists.map(&:cached_votes_score).sum
+  end
+
+  def gravatar_url(size=80)
+    hash = Digest::MD5.hexdigest(email.downcase)
+    "http://www.gravatar.com/avatar/#{hash}?s=#{size}"
+  end
 end
