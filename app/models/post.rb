@@ -1,6 +1,4 @@
 class Post < ActiveRecord::Base
-  attr_accessible :author, :content, :title, :published, :published_at
-
   before_save :render_body
 
   validates_presence_of :title
