@@ -4,6 +4,18 @@ Sg::Application.configure do
   # Code is not reloaded between requests
   config.cache_classes = true
 
+  config.action_mailer.default_url_options = { :host => 'sciencegist.com' }
+
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "sciencegist.com",
+    :user_name            => "info@sciencegist.com",
+    :password             => ENV['SG_GMAIL_PASSWORD'],
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }
+
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
