@@ -1,7 +1,7 @@
 .row.paper_container
   .large-12.columns
     .gist_container
-      .header= render 'papers/header', paper: paper
+      .header= render 'papers/header', paper: paper, hr: false
       .gists
         = render 'gists/gist', gist: paper.gists.order('cached_votes_score desc').first, 
           display_title: false, voting: false

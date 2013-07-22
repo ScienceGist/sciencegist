@@ -2,4 +2,5 @@ h1.paper_title=link_to_unless_current paper.title, paper_path(paper)
 h5.paper_metadata 
   span #{paper.metadata['authors']} (#{paper.metadata['journal']})&nbsp;
   = link_to paper.identifier, paper.url
-hr
+- if !defined?(hr) || hr
+  hr

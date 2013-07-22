@@ -1,7 +1,7 @@
 .row
   .large-12.columns 
     h1 Profile
-    p= image_tag @user.gravatar_url
+    p= image_tag @user.gravatar_url, width: 80, height: 80
     p This is user #{@user.email}'s profile. This user has #{@user.karma} points, which they got by writing #{@user.gists.size} gists.
     p 
       | User wrote gists:
