@@ -18,6 +18,6 @@ class User < ActiveRecord::Base
 
   def gravatar_url(size=80)
     hash = Digest::MD5.hexdigest(email.downcase)
-    "http://www.gravatar.com/avatar/#{hash}?s=#{size}&d=#{URI.encode('http://sciencegist.com/assets/default_profile.png')}"
+    "http://www.gravatar.com/avatar/#{hash}?s=#{size}&d=#{CGI.escape('http://sciencegist.com/images/default_profile.png')}"
   end
 end
