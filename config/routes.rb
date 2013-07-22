@@ -9,6 +9,7 @@ Sg::Application.routes.draw do
   devise_for :users
 
   get "pages/index"
+  get "pages/about"
   get '/blog' => 'blog#index'
 
   get '/p/:id' => 'papers#show', :as => 'paper'
