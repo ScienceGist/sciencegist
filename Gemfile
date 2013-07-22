@@ -26,7 +26,7 @@ gem 'acts_as_votable', github: 'ryanto/acts_as_votable', branch: 'master'
 # Gems used only for assets and not required
 # in production environments by default.
 
-gem 'zurb-foundation', '~> 4.3.0'
+gem 'zurb-foundation', '~> 4.2.3'
 gem 'sass-rails',   '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 

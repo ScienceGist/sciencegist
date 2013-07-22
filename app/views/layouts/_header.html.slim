@@ -8,22 +8,17 @@ nav.top-bar
       a href="#"
         span
 
-  section class="top-bar-section"
+  section.top-bar-section
     ul.left
       li= link_to 'About', pages_about_path
     ul.right
-      li.divider
       li= link_to 'Add gist', new_gist_path
       - if current_user      
-        li.divider
         li= link_to 'Your gists', gists_path
       - else
-        li.divider
         li= link_to "Sign up", new_user_registration_path
-        li.divider
         li= link_to "Sign in", user_session_path
       - if current_user
-        li.divider
         li
           = link_to "Log out", destroy_user_session_path, method: 'delete'
 

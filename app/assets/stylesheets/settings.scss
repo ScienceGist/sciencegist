@@ -1,8 +1,47 @@
-$body-bg: #efefef;
+$body-bg: #fff;
 $body-font-family: 'Open Sans', sans-serif;
 $primary-color: $color;
 $header-font-family: "Open Sans", sans-serif;
-$header-font-weight: normal;
+$header-font-weight: bold;
 $panel-bg: #fff;
-$topbar-title-weight: normal;
-$topbar-link-weight: normal;
+$topbar-title-weight: bold;
+$topbar-link-weight: bold;
+
+$topbar-bg: #fff;
+
+// $topbar-title-font-size: emCalc(17);
+
+// Style the top bar dropdown elements
+
+$topbar-dropdown-bg: #fff;
+// $topbar-dropdown-link-color: #fff;
+$topbar-dropdown-link-bg: lighten($topbar-bg, 5%);
+// $topbar-dropdown-toggle-size: 5px;
+// $topbar-dropdown-toggle-color: #fff;
+// $topbar-dropdown-toggle-alpha: 0.5;
+
+// Set the link colors and styles for top-level nav
+
+$topbar-link-color: #111;
+$topbar-link-color-hover: #111;
+// $topbar-link-color-active: red;
+// $topbar-link-hover-lightness: 50%; // Darken by 30%
+$topbar-link-bg-hover: lighten($color, 50%);
+// $topbar-link-bg-active: red;
+
+// Top menu icon styles
+
+// $topbar-menu-link-transform: uppercase;
+// $topbar-menu-link-font-size: emCalc(13);
+// $topbar-menu-link-weight: bold;
+$topbar-menu-link-color: #111;
+$topbar-menu-icon-color: #111;
+
+$input-focus-bg-color: darken(#fff, 2%);
+$input-border-color: lighten(#111, 70%);
+$input-focus-border-color: $color;
+$input-border-style: solid;
+$input-border-width: 1px;
+$input-box-shadow: none;
+
+$global-radius: 20px;

@@ -8,7 +8,6 @@
   margin: 1em 0;
   background: white;
   padding: 2.25em 1em 1em;
-  @include nice_shadow;
 }
 
 // Buttons
@@ -63,10 +62,10 @@ a {
   color: $color;
   text-decoration: none;
 }
-a:hover {
-  color: $color;
-  text-decoration: underline;
-}
+// a:hover {
+//   color: $color;
+//   text-decoration: underline;
+// }
 
 .header-launch {
   .brand {
@@ -105,13 +104,13 @@ a:hover {
 
 .top-bar .logo {
   position: relative;
-  top: 4px;
+  top: -2px;
 }
 .new_user_promo {
   padding: 24px;
   margin-top: 12px;
   @include nice_shadow;
-  background-color: lighten($color_1, 5);
+  background-color: lighten($color, 5);
   input[type=text], input[type=email], input[type=password], input {
     width: 100%;
   }
@@ -131,7 +130,7 @@ a:hover {
   }
   .submit {
     .btn {
-      background: $color_1;
+      background: $color;
     }
     text-align: right;
   }
@@ -149,4 +148,39 @@ a:hover {
   margin: 2em 0 1em;
   text-align: center;
   font-size: 12px;
+}
+
+.separator {
+  height: 3px;
+  background-color: $color;
+}
+.example_container {
+  padding: 2em 0;
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  h3 {
+    color: black;
+  }
+  background-color: lighten($color, 20%);
+  color: black;
+  .gist, .abstract {
+    padding: 1.5em;
+    margin: 2em 0;
+    h3 {
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .abstract {
+    background: lighten($color, 40);
+
+  }
+
+  .gist {
+    background: lighten($color, 40);
+  }
 }

@@ -1,11 +1,13 @@
 .row
   .large-12.columns
     .center.logo= image_tag 'logo.png'
-    p
-      | ScienceGists are simplified summaries of scientific papers. ScienceGist's goal is to provide a&nbsp;
-      = link_to 'simple English', 'https://simple.wikipedia.org/wiki/Simple_English_Wikipedia'
-      |  version of science. Click “Add gist” below to help.
-    
+    markdown:
+      ScienceGists are simplified summaries of scientific papers. ScienceGist's goal is to provide a [simple English](https://simple.wikipedia.org/wiki/Simple_English_Wikipedia) version of science. ScienceGist is funded (and maintained) by [Jure Triglav](http://www.twitter.com/juretriglav).
+
+    ' <iframe style="border: 0; margin: 0; padding: 0;"
+        src="https://www.gittip.com/jure/widget.html"
+        width="48pt" height="22pt"></iframe>
+
 .row
   .large-6.large-offset-3.columns
     ul.small-block-grid-4.contact
