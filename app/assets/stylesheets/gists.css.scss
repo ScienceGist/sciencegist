@@ -2,8 +2,46 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.gist, .header {
+.gist_box, .header {
   h1 {
     font-size: emCalc(23px);
+    line-height: 1.6;
+  }
+
+  .gist_author {
+    text-align: right;
+  }
+}
+
+.gist_box {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e6e6e6;
+  margin-bottom: 1.25em;
+  
+  .gist {
+    padding: 1em;
+  }
+  .actions {
+    background-color: lighten(#111,90%);
+    padding: 1em;
+    ul.inline-list {
+      float: left;
+    }
+    ul.inline-list, p {
+      margin-bottom: 0;
+    }
+    .gist_author {
+      float: right;
+    }
+    overflow: hidden;
+    width: 100%;
+  }
+  .score {
+    text-align: center;
+    .score_number {
+      margin: 0 1em;
+    }
+    margin-bottom: 1em;
   }
 }

@@ -3,6 +3,7 @@ br
 - if @papers.present?
   - @papers.each do |paper|
     = render 'paper', paper: paper
+  p.center Only the highest ranked gists are displayed here. Click on a paper title to get all gists for that paper.
 - else
   p.center
     | No papers with that title or DOI have been gisted.

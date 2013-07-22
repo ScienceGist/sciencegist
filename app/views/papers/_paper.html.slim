@@ -1,10 +1,7 @@
 .row.paper_container
   .large-12.columns
     .gist_container
-      .paper
-        h3 #{paper.title}
-        div.info
-          p.paper_authors Authors: #{paper.authors}
+      .header= render 'papers/header', paper: paper
       .gists
-        - paper.gists.order('cached_votes_score desc').each do |gist|
-          = render 'gists/gist_in_search', gist: gist
+        = render 'gists/gist', gist: paper.gists.order('cached_votes_score desc').first, 
+          display_title: false, voting: false

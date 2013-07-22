@@ -3,11 +3,11 @@ require 'api_v1'
 require 'entities'
 
 Sg::Application.routes.draw do
-  
   mount Sg::ApiV1 => '/'
 
   devise_for :users
 
+  resources :profiles, only: [:show, :edit, :update]
   get "pages/index"
   get "pages/about"
   get '/blog' => 'blog#index'

@@ -2,7 +2,7 @@
   .large-12.columns
     .header= render 'papers/header', paper: @paper
     h3.paper_gists Gists
-    - @paper.gists.each_with_index do |gist, i|
+    - @paper.gists.order('cached_votes_score desc').each_with_index do |gist, i|
       = render 'gists/gist', gist: gist, i: i + 1, display_title: false
 
     .center.add_gist= link_to 'Add gist for this paper', new_gist_path(identifier: @paper.identifier), class: 'button'

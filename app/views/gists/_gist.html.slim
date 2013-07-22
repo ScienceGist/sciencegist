@@ -1,16 +1,26 @@
 .row
   .large-12.columns
-    .gist.panel
-      - if !defined?(display_title) || display_title
-        = render 'papers/header', paper: gist.paper
-      p.gist_author
-        strong Gist author:
-        | &nbsp;
-        = gist.author_name
-        span.created_at &nbsp;(Created: #{distance_of_time_in_words_to_now(gist.created_at)} ago)
-      p.content
+    .gist_box
+      .actions
+        ul.inline-list
+          - if current_user && gist.user == current_user
+            li= link_to 'Edit', edit_gist_path(gist.id)
+          li=link_to 'Link', gist_path(gist.id)
+        .gist_author
+          p
+            | Written by&nbsp;
+            - if gist.user
+              = link_to link_to gist.author_name, profile_path(gist.user)
+            - else
+              = gist.author_name
+            |  #{distance_of_time_in_words_to_now(gist.created_at)} ago
+      .gist
+        - if !defined?(display_title) || display_title
+          = render 'papers/header', paper: gist.paper
         == gist.content_html
-      ul.inline-list.actions
-        - if current_user && gist.user == current_user
-          li= link_to 'Edit', edit_gist_path(gist.id)
-        li=link_to 'Link', gist_path(gist.id)
+      - if !defined?(voting) || voting
+        .score
+          = link_to 'I get it ▲', vote_up_path(id: gist.id), class: 'vote_up'
+          span.score_number id="gist_#{gist.id}"
+            = gist.cached_votes_score
+          = link_to "▼ I don't get it", vote_down_path(id: gist.id), class: 'vote_down'
