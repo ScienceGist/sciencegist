@@ -5,8 +5,8 @@ p
   = p.input :identifier, label: 'DOI or arXiv', placeholder: 'DOI (e.g. “doi: 10.1021/ac1014832”) or arXiv identifier (e.g. “arXiv:1301.7746”)'
   = p.input :title, input_html: { id: 'title'}, placeholder: 'Fill in identifier above'
   = p.simple_fields_for :metadata do |m|
-    = m.input :authors, input_html: { id: 'authors', value: paper.metadata[:authors]}, required: false, placeholder: 'Fill in identifier above'
-    = m.input :journal, input_html: { id: 'journal', value: paper.metadata[:journal]}, required: false, placeholder: 'Fill in identifier above'
+    = m.input :authors, input_html: { id: 'authors', value: paper.authors}, required: false, placeholder: 'Fill in identifier above'
+    = m.input :journal, input_html: { id: 'journal', value: paper.journal}, required: false, placeholder: 'Fill in identifier above'
 p
   strong Gist&nbsp;
   | Describe in simple terms what the paper is about:

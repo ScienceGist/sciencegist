@@ -1,13 +1,4 @@
 GIT
-  remote: git://github.com/engageis/activerecord-postgres-hstore.git
-  revision: 385085f3d661a19e4b38fa3a2630746390cfa131
-  specs:
-    activerecord-postgres-hstore (0.7.6)
-      activerecord (>= 3.1)
-      pg-hstore (>= 1.1.5)
-      rake
-
-GIT
   remote: git://github.com/ryanto/acts_as_votable.git
   revision: 1d2e387066c64afb26c51c70f9497e0c8f93ea2d
   branch: master
@@ -121,7 +112,6 @@ GEM
     paper_metadata (0.0.4)
       nokogiri (= 1.5.6)
     pg (0.15.1)
-    pg-hstore (1.1.7)
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -224,7 +214,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord-postgres-hstore!
   acts_as_votable!
   capistrano
   capistrano-rbenv

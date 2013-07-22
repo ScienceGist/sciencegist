@@ -4,5 +4,6 @@
     h3.paper_gists Gists
     - @paper.gists.order('cached_votes_score desc').each_with_index do |gist, i|
       = render 'gists/gist', gist: gist, i: i + 1, display_title: false
-
+    - if @paper.gists.blank?
+      p No gists exist yet for this paper . Be the first to create one:
     .center.add_gist= link_to 'Add gist for this paper', new_gist_path(identifier: @paper.identifier), class: 'button'

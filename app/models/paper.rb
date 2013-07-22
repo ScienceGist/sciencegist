@@ -1,29 +1,15 @@
 class Paper < ActiveRecord::Base
-  # attr_accessible :abstract, :abstract_html, :metadata, :title, :user_id, :identifier
-  store_accessor :metadata, :authors
-  #serialize :metadata, ActiveRecord::Coders::Hstore
+  store_accessor :metadata, :authors, :journal
 
+  validates_uniqueness_of :identifier
   has_many :gists
 
-  def metadata
-    OpenStruct.new(super)
-  end
-
-
-  def author
-    if metadata && metadata.author
-      metadata.author
-    else
-      'Unknown'
-    end
+  def self.find_by_identifier(identifier)
+    where('lower(identifier) = lower(?)', identifier).first
   end
 
   def authors
-    if metadata && metadata.authors
-      metadata.authors
-    else
-    'Unknown'
-    end
+    super ? super : 'Unknown'
   end
 
   def url

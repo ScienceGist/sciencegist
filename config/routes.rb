@@ -26,6 +26,9 @@ Sg::Application.routes.draw do
 
   root :to => 'pages#index'
 
+  match 'doi/*identifiers' => 'identifiers#doi', via: [:get]
+  match 'arxiv/*identifiers' => 'identifiers#arxiv', via: [:get]
+  
   namespace :admin do
     resources :users
     resources :posts

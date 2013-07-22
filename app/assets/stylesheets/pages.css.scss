@@ -74,10 +74,8 @@ a {
   top: 0px;
 }
 .new_user_promo {
-  padding: 24px;
-  margin-top: 12px;
-  @include nice_shadow;
-  background-color: lighten($color, 5);
+  padding: 1em;
+  background-color: lighten($color,50%);
   input[type=text], input[type=email], input[type=password], input {
     width: 100%;
   }
