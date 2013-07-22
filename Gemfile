@@ -21,7 +21,7 @@ gem 'kramdown'
 gem 'paper_metadata'
 gem 'grape'
 gem 'grape-entity'
-
+gem 'acts_as_votable', github: 'ryanto/acts_as_votable', branch: 'master'
 
 # Gems used only for assets and not required
 # in production environments by default.

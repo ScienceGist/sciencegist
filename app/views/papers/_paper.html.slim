@@ -6,5 +6,5 @@
         div.info
           p.paper_authors Authors: #{paper.authors}
       .gists
-        - paper.gists.order('score desc').each do |gist|
+        - paper.gists.order('cached_votes_score desc').each do |gist|
           = render 'gists/gist_in_search', gist: gist

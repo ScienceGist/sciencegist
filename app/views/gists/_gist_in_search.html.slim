@@ -12,7 +12,7 @@
         == gist.content_html
       div
         span.score id="gist_#{gist.id}"
-          = gist.score
+          = gist.cached_votes_score
         | &nbsp;
         = link_to 'I get it', vote_up_path(id: gist.id), class: 'vote_up'
         | &nbsp;/&nbsp;

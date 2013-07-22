@@ -10,6 +10,8 @@ class Gist < ActiveRecord::Base
 
   before_save :render_content
 
+  acts_as_votable
+
   def author_name
     if user
       user.email

@@ -1,5 +1,5 @@
 class GistsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:update, :destroy, :edit, :index]
+  before_filter :authenticate_user!, :only => [:update, :destroy, :edit, :index, :vote_up, :vote_down]
 
   def show
     @gist = Gist.find(params[:id])
@@ -20,16 +20,14 @@ class GistsController < ApplicationController
 
   def vote_up
     @gist = Gist.find(params[:id])
-    @gist.score = @gist.score + 1
-    @gist.save
-    render :json => @gist
+    @gist.liked_by current_user
+    render :json => {id: @gist.id, score: @gist.cached_votes_score}
   end
 
   def vote_down
     @gist = Gist.find(params[:id])
-    @gist.score = @gist.score - 1
-    @gist.save
-    render :json => @gist
+    @gist.disliked_by current_user
+    render :json => {id: @gist.id, score: @gist.cached_votes_score}
   end
 
   def create
