@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/jure/paper_metadata.git
-  revision: 1d5fe0859e5c3a170d6e062fdb970937e5429e46
+  revision: 45d9198211aaa221e4c769a60d72f70b426cd8e7
   specs:
     paper_metadata (0.0.4)
       nokogiri (= 1.5.6)
