@@ -2,13 +2,13 @@ class Admin::PostsController < ApplicationController
   layout 'admin/layout'
 
   def create
-    @post = Post.create(params[:post])
+    @post = Post.create(post_params[:post])
     redirect_to admin_posts_path
   end
 
   def update
-    @post = Post.find(params[:id])
-    @post.update_attributes(params[:post])
+    @post = Post.find(post_params[:id])
+    @post.update_attributes(post_params[:post])
     redirect_to admin_posts_path
   end
 
@@ -30,4 +30,10 @@ class Admin::PostsController < ApplicationController
     @post.destroy
     redirect_to admin_posts_path
   end
+
+  private
+  def post_params
+    params.permit(:id, post: [:author, :published, :published_at, :content])
+  end
+
 end

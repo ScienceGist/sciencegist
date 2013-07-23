@@ -1,18 +1,17 @@
 html
   head
-    title ScienceGist - Developer’s blog
+    title= content_for?(:title) ? "ScienceGist Blog - #{yield(:title)}"  : "The ScienceGist Blog" 
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
     = stylesheet_link_tag "blog"
     = csrf_meta_tags
     = load_typekit
-  body
-    = render :partial => 'layouts/blog_header'
-    .container
-      .row
-        .span8.offset2
-          - if flash[:notice] || flash[:alert]
-            .notice= notice
-            .alert= alert
-          = yield
-      = render 'layouts/blog_footer'
+  body#blog
+    .row
+      .large-6.large-offset-3.medium-8.medium-offset-2.columns
+        = render :partial => 'layouts/blog_header'
+        - if flash[:notice] || flash[:alert]
+          .notice= notice
+          .alert= alert
+        = yield
+        = render 'layouts/blog_footer'
