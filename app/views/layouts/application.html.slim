@@ -27,6 +27,23 @@ body*{:class => "#{controller.controller_name}_#{controller.action_name}" }
         .alert-box.alert= alert
   = yield
 
+  #overlay
+  #signup_form
+    .row
+      .large-12.columns
+        .panel
+          .right
+            p#close= link_to 'x', ''
+          .row
+            .large-5.columns
+              p Only registered users can vote, join on the spot:
+              = simple_form_for new_user, :url => registration_path(:user) do |u|
+                = render 'users/form_popup', f: u, button_text: 'Join', button_class: 'alert'
+            .large-5.columns
+              p If you're already a user, you can sign in here:
+              = simple_form_for new_user, :url => session_path(:user) do |u|
+                = render 'users/form_popup', f: u, button_text: 'Sign in', button_class: ''
+
   javascript:
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

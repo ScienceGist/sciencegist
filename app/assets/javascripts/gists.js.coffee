@@ -16,16 +16,33 @@ $ ->
         $('#journal').val(data.journal)
 
 $ ->
+  login_popup = (data) ->
+    if data.status == 401
+      $('#overlay').show()
+      $('#signup_form').show()
+
   $('.vote_up').on "click", (e) ->
     e.preventDefault()
     that = this
-    $.get that.href, (data) ->
+    $.get(that.href, (data) ->
       $('#gist_' + data.id).html(data.score)
+    ).fail( (data) ->
+      login_popup(data)
+    )
 
-
-$ ->
   $('.vote_down').on "click", (e) ->
     e.preventDefault()
     that = this
-    $.get that.href, (data) ->
-     $('#gist_' + data.id).html(data.score)
+    $.get(that.href, (data) ->
+      $('#gist_' + data.id).html(data.score)
+    ).fail( (data) ->
+      login_popup(data)
+    )
+
+  $('#overlay, #close').on "click", (e) ->
+    e.preventDefault()
+    $('#overlay').hide()
+    $('#signup_form').hide()
+
+
+  

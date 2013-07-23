@@ -145,3 +145,31 @@ a {
     background: lighten($color, 40);
   }
 }
+
+#overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  opacity: .7;
+  filter: alpha(opacity=70);
+  z-index: 1;
+  display: none;
+}
+
+#signup_form {
+  position: fixed;
+  width: 100%;
+  top: 20%;
+  display: none;
+  .row .panel {
+    background-color: white;
+  }
+  z-index: 2;
+  .right {
+    a { color: #111; }
+    float: right;
+  }
+}

@@ -1,7 +1,9 @@
 class GistsController < ApplicationController
+  before_filter :store_location, :only => [:new, :show]
   before_filter :authenticate_user!, :only => [:update, :destroy, :edit, :index, :vote_up, :vote_down]
 
   def show
+    binding.pry
     @gist = Gist.find(params[:id])
   end
 

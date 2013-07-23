@@ -1,4 +1,6 @@
 class PapersController < ApplicationController
+  before_filter :store_location, only: [:show]
+  
   def show
     @paper = Paper.find(params[:id])
   end

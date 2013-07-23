@@ -1,0 +1,10 @@
+h4= button_text
+.row
+  .large-12.columns
+    = f.input :email, label: false, placeholder: 'E-mail'
+.row
+  .large-12.columns
+    = f.input :password, label: false, placeholder: 'Password'
+.row  
+  .large-12.columns
+    = f.button :submit, :value => button_text, class: 'button ' + button_class
