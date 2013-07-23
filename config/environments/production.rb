@@ -16,6 +16,12 @@ Sg::Application.configure do
     :enable_starttls_auto => true
   }
 
+  config.middleware.use ExceptionNotification::Rack,
+    :email => {
+      :email_prefix => "[ScienceGist Production] ",
+      :sender_address => %{"notifier" <info@sciencegist.com>},
+      :exception_recipients => %w{errors@sciencegist.com}
+    }
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true

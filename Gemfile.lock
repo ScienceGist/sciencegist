@@ -74,6 +74,9 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.4)
     erubis (2.7.0)
+    exception_notification (4.0.0)
+      actionmailer (>= 3.0.4)
+      activesupport (>= 3.0.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
     grape (0.5.0)
@@ -225,6 +228,7 @@ DEPENDENCIES
   capistrano-unicorn
   coffee-rails (~> 4.0.0)
   devise
+  exception_notification
   grape
   grape-entity
   jquery-rails
