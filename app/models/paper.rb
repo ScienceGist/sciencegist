@@ -21,4 +21,8 @@ class Paper < ActiveRecord::Base
       nil
     end
   end
+
+  def top_gist
+    gists.order('cached_votes_score desc').first
+  end
 end

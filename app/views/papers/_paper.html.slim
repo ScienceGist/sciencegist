@@ -3,5 +3,5 @@
     .gist_container
       .header= render 'papers/header', paper: paper, hr: false
       .gists
-        = render 'gists/gist', gist: paper.gists.order('cached_votes_score desc').first, 
-          display_title: false, voting: false
+        = render 'gists/gist', gist: paper.top_gist, 
+          display_title: false, voting: false if paper.top_gist
