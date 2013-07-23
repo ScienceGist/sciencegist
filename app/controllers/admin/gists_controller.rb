@@ -10,6 +10,9 @@ class Admin::GistsController < ApplicationController
     @gist = Gist.find(gist_params[:id])
     @gist.assign_attributes(gist_params[:gist])
     paper = Paper.find_by_identifier(params[:gist][:paper_attributes][:identifier])
+    if paper.authors.blank? && gist_params[:gist][:paper_attributes][:title].present?
+      paper.update_attributes(gist_params[:gist][:paper_attributes])
+    end
     @gist.paper = paper if paper
     @gist.save
     redirect_to admin_gists_path
@@ -36,6 +39,6 @@ class Admin::GistsController < ApplicationController
 
   private
   def gist_params
-    params.permit(:id, gist: [:id, {paper_attributes: [:identifier, :title, {metadata: [:authors, :journal]}]}, :content])
+    params.permit(:id, gist: [:id, {paper_attributes: [:identifier, :title, :authors, :journal]}, :content])
   end
 end

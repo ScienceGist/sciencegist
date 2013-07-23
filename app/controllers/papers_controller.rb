@@ -1,6 +1,6 @@
 class PapersController < ApplicationController
   before_filter :store_location, only: [:show]
-  
+
   def show
     @paper = Paper.find(params[:id])
   end
@@ -15,6 +15,10 @@ class PapersController < ApplicationController
 
   def metadata
     result = PaperMetadata.metadata_for(params[:q])
-    render :json => result
+    if result && result[:title]
+      render :json => result
+    else
+      render :json => nil, status: 404
+    end
   end
 end

@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/jure/paper_metadata.git
+  revision: 1d5fe0859e5c3a170d6e062fdb970937e5429e46
+  specs:
+    paper_metadata (0.0.4)
+      nokogiri (= 1.5.6)
+
+GIT
   remote: git://github.com/ryanto/acts_as_votable.git
   revision: 1d2e387066c64afb26c51c70f9497e0c8f93ea2d
   branch: master
@@ -109,8 +116,6 @@ GEM
       net-ssh (>= 2.6.5)
     nokogiri (1.5.6)
     orm_adapter (0.4.0)
-    paper_metadata (0.0.4)
-      nokogiri (= 1.5.6)
     pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12.2)
@@ -224,7 +229,7 @@ DEPENDENCIES
   grape-entity
   jquery-rails
   kramdown
-  paper_metadata
+  paper_metadata!
   pg
   pry-rails
   psych

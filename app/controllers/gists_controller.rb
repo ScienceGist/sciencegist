@@ -10,6 +10,10 @@ class GistsController < ApplicationController
     @gist = current_user.gists.where(id: params[:id]).first
     @gist.assign_attributes(gist_params[:gist])
     paper = Paper.find_by_identifier(params[:gist][:paper_attributes][:identifier])
+    if paper.authors.blank? && gist_params[:gist][:paper_attributes][:title].present?
+      paper.update_attributes(gist_params[:gist][:paper_attributes])
+    end
+ 
     @gist.paper = paper if paper
     @gist.save
     redirect_to gist_path(@gist)
@@ -36,9 +40,12 @@ class GistsController < ApplicationController
     paper = Paper.find_by_identifier(gist_params[:gist][:paper_attributes][:identifier])
     @gist.paper = paper if paper
     @gist.user = current_user
+    if @gist.save
+      redirect_to paper_path(@gist.paper_id)
+    else
+      render 'new'
 
-    @gist.save
-    redirect_to paper_path(@gist.paper_id)
+    end
   end
 
   def destroy
@@ -62,6 +69,6 @@ class GistsController < ApplicationController
 
   private
   def gist_params
-    params.permit(:id, gist: [:id, {paper_attributes: [:identifier, :title, {metadata: [:authors, :journal]}]}, :content])
+    params.permit(:id, gist: [:id, {paper_attributes: [:identifier, :title, :authors, :journal]}, :content])
   end
 end

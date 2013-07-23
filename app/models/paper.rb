@@ -2,14 +2,14 @@ class Paper < ActiveRecord::Base
   store_accessor :metadata, :authors, :journal
 
   validates_uniqueness_of :identifier
+  validates_presence_of :authors
+  validates_presence_of :title
+  validates_presence_of :journal
+
   has_many :gists
 
   def self.find_by_identifier(identifier)
     where('lower(identifier) = lower(?)', identifier).first
-  end
-
-  def authors
-    super ? super : 'Unknown'
   end
 
   def url

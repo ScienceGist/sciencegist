@@ -24,12 +24,10 @@ class IdentifiersController < ApplicationController
     else
       metadata = PaperMetadata.metadata_for(@arxiv)
       unless metadata.blank?
-        metadata[:author] = metadata[:author].split("\n").map do |a| a.strip if a.strip.present?
-        end.compact.join(', ')
         @paper = Paper.create!(title: metadata[:title], 
           identifier: @arxiv, 
           journal: metadata[:journal],
-          authors: metadata[:author])
+          authors: metadata[:authors])
         redirect_to paper_path(@paper.id)
       end
     end

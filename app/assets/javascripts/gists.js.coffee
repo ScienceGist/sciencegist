@@ -14,7 +14,12 @@ $ ->
         $('#title').val(data.title)
         $('#authors').val(data.authors)
         $('#journal').val(data.journal)
-
+        $(".gist_paper_identifier").removeClass('error')
+        $(".gist_paper_identifier small").remove()
+      error: (data) ->
+        if $(".gist_paper_identifier small").length == 0 
+          $(".gist_paper_identifier").append('<small>DOI or arXiv identifier not found. Must be in exact format, e.g. <strong>doi: 10.1021/ac1014832</strong> or <strong>arXiv:1301.7746</strong>');
+        $(".gist_paper_identifier").addClass('error')
 $ ->
   login_popup = (data) ->
     if data.status == 401
