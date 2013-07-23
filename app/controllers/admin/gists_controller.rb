@@ -10,10 +10,14 @@ class Admin::GistsController < ApplicationController
     @gist = Gist.find(gist_params[:id])
     @gist.assign_attributes(gist_params[:gist])
     paper = Paper.find_by_identifier(params[:gist][:paper_attributes][:identifier])
-    if paper.authors.blank? && gist_params[:gist][:paper_attributes][:title].present?
-      paper.update_attributes(gist_params[:gist][:paper_attributes])
+    if paper
+      if paper.authors.blank? && gist_params[:gist][:paper_attributes][:title].present?
+        paper.update_attributes(gist_params[:gist][:paper_attributes])
+      end
+      @gist.paper = paper
+    else
+      @gist.paper = Paper.new(gist_params[:gist][:paper_attributes])
     end
-    @gist.paper = paper if paper
     @gist.save
     redirect_to admin_gists_path
   end

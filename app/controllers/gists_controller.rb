@@ -10,11 +10,14 @@ class GistsController < ApplicationController
     @gist = current_user.gists.where(id: params[:id]).first
     @gist.assign_attributes(gist_params[:gist])
     paper = Paper.find_by_identifier(params[:gist][:paper_attributes][:identifier])
-    if paper.authors.blank? && gist_params[:gist][:paper_attributes][:title].present?
-      paper.update_attributes(gist_params[:gist][:paper_attributes])
+    if paper
+      if paper.authors.blank? && gist_params[:gist][:paper_attributes][:title].present?
+        paper.update_attributes(gist_params[:gist][:paper_attributes])
+      end
+      @gist.paper = paper
+    else
+      @gist.paper = Paper.new(gist_params[:gist][:paper_attributes])
     end
- 
-    @gist.paper = paper if paper
     @gist.save
     redirect_to gist_path(@gist)
   end
