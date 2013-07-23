@@ -33,7 +33,7 @@ class Admin::PostsController < ApplicationController
 
   private
   def post_params
-    params.permit(:id, post: [:author, :published, :published_at, :content])
+    params.permit(:id, post: [:title, :author, :published, :published_at, :content])
   end
 
 end
