@@ -64,6 +64,11 @@ body {
 }
 
 #blog {
+  h1 {
+    a {
+      color: #111;
+    }
+  }
   .post {
     img {
       margin-bottom: 1em;

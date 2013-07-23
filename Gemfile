@@ -22,6 +22,7 @@ gem 'grape'
 gem 'grape-entity'
 gem 'acts_as_votable', github: 'ryanto/acts_as_votable', branch: 'master'
 gem 'exception_notification'
+gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'master'
 
 # Gems used only for assets and not required
 # in production environments by default.

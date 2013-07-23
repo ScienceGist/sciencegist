@@ -1,5 +1,5 @@
 .post
-  h1.title= post.title
+  h1.title= link_to post.title, root_path(subdomain: 'blog') + post.slug
   p.information #{post.author.html_safe} on #{post.friendly_published_at}
   p.content== post.html
   p.social

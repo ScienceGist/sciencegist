@@ -15,6 +15,7 @@ Sg::Application.routes.draw do
   get '/p/:id' => 'papers#show', :as => 'paper'
 
   match '', to: 'blog#index', constraints: lambda { |r| r.subdomain.present? && r.subdomain != 'www' }, via: [:get]
+  match ':id', to: 'blog#show', constraints: lambda { |r| r.subdomain.present? && r.subdomain != 'www' }, via: [:get]
 
   resources :gists
   resources :papers

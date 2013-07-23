@@ -7,7 +7,7 @@ class Admin::PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(post_params[:id])
+    @post = Post.find_by_slug(post_params[:id])
     @post.update_attributes(post_params[:post])
     redirect_to admin_posts_path
   end
