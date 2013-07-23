@@ -7,6 +7,8 @@ class Admin::BaseController < ApplicationController
   def index
     @user = current_user
     @user_count = User.count
+    @paper_count = Paper.count
+    @gist_count = Gist.count
   end
 
   def verify_admin

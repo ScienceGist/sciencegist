@@ -1,0 +1,3 @@
+h4 Editing: #{@gist.paper.title}
+= simple_form_for @gist, url: admin_gist_path(@gist.id) do |f|
+  = render 'gists/form', f: f, paper: @gist.paper

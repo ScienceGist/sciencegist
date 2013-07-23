@@ -3,17 +3,16 @@ class GistsController < ApplicationController
   before_filter :authenticate_user!, :only => [:update, :destroy, :edit, :index, :vote_up, :vote_down]
 
   def show
-    binding.pry
     @gist = Gist.find(params[:id])
   end
 
   def update
     @gist = current_user.gists.where(id: params[:id]).first
-    @gist.assign_attributes(params[:gist])
+    @gist.assign_attributes(gist_params[:gist])
     paper = Paper.find_by_identifier(params[:gist][:paper_attributes][:identifier])
     @gist.paper = paper if paper
     @gist.save
-    redirect_to gists_path
+    redirect_to gist_path(@gist)
   end
 
   def index

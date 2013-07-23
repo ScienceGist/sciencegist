@@ -1,0 +1,14 @@
+h1 Gists
+
+table
+  thead
+    tr
+      th Id
+      th Created at
+      th Paper title
+      th Author
+      th Score
+      th Actions
+  tbody
+    - @gists.each do |gist|
+      = render 'gist', gist: gist

@@ -1,7 +1,19 @@
-= link_to "ScienceGist Admin", admin_root_path, :class => 'brand'
-ul.nav.pull-right
-  li
-    = link_to 'Posts', admin_posts_url
-  - if user_signed_in?
-    li
-      = link_to('Sign out', destroy_user_session_path, :method=>'delete')
+nav.top-bar
+  ul.title-area
+    li.name
+      h1
+        a href=admin_root_path 
+          = image_tag '/images/sciencegist-logo-small.png', class: 'logo', width: 32, height: 32
+          | ScienceGist Admin
+    li.toggle-topbar.menu-icon
+      a href="#"
+        span
+
+  section.top-bar-section
+    ul.right
+      li= link_to 'Posts', admin_posts_url
+      li= link_to 'Gists', admin_gists_url
+      li= link_to "Log out", destroy_user_session_path, method: 'delete'
+      li= image_tag current_user.gravatar_url(45)
+
+

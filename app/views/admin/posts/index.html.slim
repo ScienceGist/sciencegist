@@ -1,15 +1,17 @@
 h1 Posts
 
-table.table
-  tr
-    th Id
-    th Created at
-    th Title
-    th Author
-    th Published
-    th Published at
-    th Actions
-  - @posts.each do |post|
-    = render 'post', post: post
+table
+  thead
+    tr
+      th Id
+      th Created at
+      th Title
+      th Author
+      th Published
+      th Published at
+      th Actions
+  tbody
+    - @posts.each do |post|
+      = render 'post', post: post
 
 = render 'form', post: @post

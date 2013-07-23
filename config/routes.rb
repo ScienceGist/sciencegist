@@ -32,6 +32,7 @@ Sg::Application.routes.draw do
   namespace :admin do
     resources :users
     resources :posts
+    resources :gists
     root :to => 'base#index'
   end
 end

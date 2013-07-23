@@ -1,0 +1,10 @@
+tr
+  td= gist.id
+  td= gist.created_at
+  td= gist.paper.title
+  td= gist.user.try(:email)
+  td= gist.cached_votes_score
+  td
+    = link_to 'Edit', edit_admin_gist_path(gist.id)
+    | &nbsp;
+    = link_to 'Delete', admin_gist_path(gist.id), :method => :delete
