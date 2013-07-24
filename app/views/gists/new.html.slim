@@ -7,6 +7,11 @@
         = simple_form_for @user, :html => { :class => "form-inline" },
           :url => registration_path(:user) do |u|
           = render 'users/form', f: u
+        hr
+        .center
+          | Or you can&nbsp;
+          = link_to "login with Twitter", user_omniauth_authorize_path(:twitter)
+        hr
         p.small If you don’t want to join, you can still create new gists, but they will be considered anonymous and you won’t be entitled to the sweat of your brow.
     .new_gist
       h3 Add a new gist

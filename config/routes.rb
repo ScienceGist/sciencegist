@@ -5,7 +5,7 @@ require 'entities'
 Sg::Application.routes.draw do
   mount Sg::ApiV1 => '/'
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :profiles, only: [:show, :edit, :update]
   get "pages/index"

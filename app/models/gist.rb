@@ -14,7 +14,7 @@ class Gist < ActiveRecord::Base
 
   def author_name
     if user
-      user.email
+      user.name
     else
       'Anonymous'
     end
