@@ -1,3 +1,6 @@
+= content_for :title 
+  = post.title
+  
 .post
   h1.title= link_to post.title, root_path(subdomain: 'blog') + post.slug
   p.information #{post.author.html_safe} on #{post.friendly_published_at}
