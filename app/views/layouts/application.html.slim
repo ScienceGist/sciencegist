@@ -36,13 +36,13 @@ body*{:class => "#{controller.controller_name}_#{controller.action_name}" }
             p#close= link_to 'x', ''
           .row
             .large-5.columns
-              p Only registered users can vote, join on the spot:
+              p Only members can vote. Join for free:
               = simple_form_for new_user, :url => registration_path(:user) do |u|
-                = render 'users/form_popup', f: u, button_text: 'Join', button_class: 'alert'
+                = render 'users/form_popup', f: u, button_text: 'Join', button_class: ''
             .large-5.columns
               p If you're already a user, you can sign in here:
               = simple_form_for new_user, :url => session_path(:user) do |u|
-                = render 'users/form_popup', f: u, button_text: 'Sign in', button_class: ''
+                = render 'users/form_popup', f: u, button_text: 'Sign in', button_class: 'secondary'
 
   javascript:
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
