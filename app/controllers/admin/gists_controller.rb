@@ -43,6 +43,6 @@ class Admin::GistsController < ApplicationController
 
   private
   def gist_params
-    params.permit(:id, gist: [:id, {paper_attributes: [:identifier, :title, :authors, :journal]}, :content])
+    params.permit(:id, gist: [:id, {paper_attributes: [:identifier, :title, :authors, :journal, :tag_list]}, :content])
   end
 end

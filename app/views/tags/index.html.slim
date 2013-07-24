@@ -1,0 +1,8 @@
+.row.tags
+  .large-12.columns
+    h1 Tags
+    - @tags.each do |tag|
+      h2.tag= tag
+      ul.inline-list
+        - Paper.tagged_with(tag.name).each do |paper|
+          li=link_to "#{paper.title} (#{paper.journal})", paper_path(paper.id)

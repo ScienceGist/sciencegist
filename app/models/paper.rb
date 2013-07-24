@@ -8,6 +8,8 @@ class Paper < ActiveRecord::Base
 
   has_many :gists
 
+  acts_as_taggable
+  
   def self.find_by_identifier(identifier)
     where('lower(identifier) = lower(?)', identifier).first
   end

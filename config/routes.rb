@@ -29,7 +29,10 @@ Sg::Application.routes.draw do
 
   match 'doi/*identifiers' => 'identifiers#doi', via: [:get], format: false
   match 'arxiv/*identifiers' => 'identifiers#arxiv', via: [:get], format: false
-  
+
+  get "tags/search"
+  get "tags" => 'tags#index'
+
   namespace :admin do
     resources :users
     resources :posts

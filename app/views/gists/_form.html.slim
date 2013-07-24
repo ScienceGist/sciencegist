@@ -6,6 +6,8 @@ p
   = p.input :title, input_html: { id: 'title'}, placeholder: 'Fill in identifier above', required: false
   = p.input :authors, input_html: { id: 'authors', value: paper.authors}, required: false, placeholder: 'Fill in identifier above'
   = p.input :journal, input_html: { id: 'journal', value: paper.journal}, required: false, placeholder: 'Fill in identifier above'
+  = p.input :tag_list, placeholder: "Tag this paper"
+ 
 p
   strong Gist&nbsp;
   | Describe in simple terms what the paper is about:

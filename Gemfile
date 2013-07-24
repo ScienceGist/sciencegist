@@ -18,11 +18,14 @@ gem 'capistrano-unicorn'
 gem 'capistrano-rbenv'
 gem 'kramdown'
 gem 'paper_metadata', github: 'jure/paper_metadata'
+gem 'paper_summary'
 gem 'grape'
 gem 'grape-entity'
 gem 'acts_as_votable', github: 'ryanto/acts_as_votable', branch: 'master'
 gem 'exception_notification'
 gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'master'
+gem 'acts-as-taggable-on'
+gem 'jquery-ui-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

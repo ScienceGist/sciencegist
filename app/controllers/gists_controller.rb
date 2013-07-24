@@ -11,9 +11,8 @@ class GistsController < ApplicationController
     @gist.assign_attributes(gist_params[:gist])
     paper = Paper.find_by_identifier(params[:gist][:paper_attributes][:identifier])
     if paper
-      if paper.authors.blank? && gist_params[:gist][:paper_attributes][:title].present?
-        paper.update_attributes(gist_params[:gist][:paper_attributes])
-      end
+      paper.assign_attributes(gist_params[:gist][:paper_attributes])
+      paper.save if paper.changed?
       @gist.paper = paper
     else
       @gist.paper = Paper.new(gist_params[:gist][:paper_attributes])
@@ -72,6 +71,6 @@ class GistsController < ApplicationController
 
   private
   def gist_params
-    params.permit(:id, gist: [:id, {paper_attributes: [:identifier, :title, :authors, :journal]}, :content])
+    params.permit(:id, gist: [:id, {paper_attributes: [:identifier, :title, :authors, :journal, :tag_list]}, :content])
   end
 end
