@@ -28,7 +28,7 @@ gem 'acts-as-taggable-on'
 gem 'jquery-ui-rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
-
+gem 'nokogiri'
 # Gems used only for assets and not required
 # in production environments by default.
 

@@ -22,7 +22,7 @@ class Admin::GistsController < ApplicationController
   end
 
   def index
-    @gists = Gist.all
+    @gists = Gist.order('id asc').all
     @gist = Gist.new
   end
 

@@ -260,6 +260,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   kramdown
+  nokogiri
   omniauth
   omniauth-twitter
   paper_metadata!
