@@ -4,17 +4,26 @@
     p= image_tag @user.gravatar_url, width: 80, height: 80
     p This is user #{@user.name}'s profile. This user has #{@user.karma} points, which they got by writing #{@user.gists.size} gists.
     p 
-      | User wrote gists:
+      h3 User wrote gists:
       ul
-        - @user.gists.order('cached_votes_score desc').each do |gist|
-          li #{gist.paper.title} (#{gist.cached_votes_score})
+        - if @wrote.present?
+          - @wrote.each do |gist|
+            li=link_to "#{gist.paper.title} (#{gist.cached_votes_score})", paper_path(gist.paper.id)
+        - else
+          p Hasn't written any gists yet.
     p
-      | "Got/understood" gists:
+      h3 "Got/understood" gists:
       ul
-        - @user.find_up_voted_items.each do |gist|
-          li #{gist.paper.title} (#{gist.cached_votes_score})
+        - if @upvoted.present?
+          - @upvoted.each do |gist|
+            li #{gist.paper.title} (#{gist.cached_votes_score})
+        - else
+          p Hasn't understood any gists yet.
     p
-      | Didn't get gists:
+      h3 Didn't get gists:
       ul
-        - @user.find_down_voted_items.each do |gist|
-          li #{gist.paper.title} (#{gist.cached_votes_score})
+        - if @downvoted.present?
+          - @downvoted.each do |gist|
+            li #{gist.paper.title} (#{gist.cached_votes_score})
+        - else
+          p Hasn't not understood any gists yet.
