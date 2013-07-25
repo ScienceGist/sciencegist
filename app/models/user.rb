@@ -35,7 +35,12 @@ class User < ActiveRecord::Base
   end
 
   def gravatar_url(size=80)
-    hash = Digest::MD5.hexdigest(email.downcase)
-    "http://www.gravatar.com/avatar/#{hash}?s=#{size}&d=#{CGI.escape('http://sciencegist.com/images/default_profile.png')}"
+    # Temp special case for eLife
+    if email == 'staff@elifesciences.org'
+      '/images/elife_logo.png'
+    else
+      hash = Digest::MD5.hexdigest(email.downcase)
+      "http://www.gravatar.com/avatar/#{hash}?s=#{size}&d=#{CGI.escape('http://sciencegist.com/images/default_profile.png')}"
+    end
   end
 end
