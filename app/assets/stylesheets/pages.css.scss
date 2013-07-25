@@ -117,10 +117,6 @@ a {
 
 .example_container {
   padding: 2em 0;
-  a {
-    color: black;
-    text-decoration: underline;
-  }
   h3 {
     color: black;
   }
@@ -137,12 +133,12 @@ a {
     }
   }
   .abstract {
-    background: lighten($color, 40);
+    background: #fff;
 
   }
 
   .gist {
-    background: lighten($color, 40);
+    background: #fff;
   }
 }
 

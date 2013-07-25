@@ -8,38 +8,11 @@
     .add_gist_box
       div.welcome
         p 
-          | ScienceGists are simplified summaries of scientific papers. ScienceGist’s goal is to provide a&nbsp;
-          = link_to 'simple English', 'https://simple.wikipedia.org/wiki/Simple_English_Wikipedia'
+          | ScienceGists are simplified summaries of scientific papers. ScienceGist’s goal is to provide a simple
           |  version of science. Click “Add gist” below to help.
       .add_gist
         = link_to 'Add gist', new_gist_path, :class => 'button'
-.example_container
-  .row
-    .large-12.columns
-      h3 What are gists?
-      markdown:
-        Take this paper for example: [First Results from the CARIBU Facility: Mass Measurements on the r-Process Path](http://arxiv.org/abs/1307.0429), and read the abstract: 
 
-      .abstract
-        markdown:
-          #### Abstract
-          
-          The Canadian Penning Trap mass spectrometer has made mass measurements of 33 neutron-rich nuclides provided by the new Californium Rare Isotope Breeder Upgrade (CARIBU) facility at Argonne National Laboratory. The studied region includes the 132Sn double shell closure and ranges in Z from In to Cs, with Sn isotopes measured out to A = 135, and the typical measurement precision is at the 100 ppb level or better. The region encompasses a possible major waiting point of the astrophysical r process, and the impact of the masses on the r process is shown through a series of simulations. These first-ever simulations with direct mass information on this waiting point show significant increases in waiting time at Sn and Sb in comparison with commonly used mass models, demonstrating the inadequacy of existing models for accurate r-process calculations.
-
-      markdown:
-        It is concise, but not understandable to anyone but scientists working in the field of nuclear astrophysics. Now read [the gist of the paper](#{gist_path(19)}):
-        
-      .gist
-        markdown:
-          #### Gist
-          
-          This is a nuclear astrophysics paper that describes some new nuclear physics measurements that help us understand how heavy elements are made in core-collapse supernovae. A brand new facility provided radioactive nuclei from nuclear fission &mdash; some of the same nuclei which exist during supernovae like those which may have made the heavy elements in the Earth. These nuclei were trapped in a magnetic field, and their masses were measured to a precision of around 0.000007%, which tells us their binding energies. Theoretical physicists haven’t figured out how to calculate what the binding energies of different nuclei are from theory yet, so we only have rough guesses called “mass models” unless we go out and measure them like this.
-
-          We know that supernovae only last about 1 second, but there’s a lot we don’t know like exactly how hot and dense it is in the center where these nuclear reactions happen. The authors used the new binding energy measurements to figure out how fast nuclear reactions with these nuclei would happen in supernovae at various temperatures and densities. This tells us whether or not there is enough time during a supernova to make the heaviest elements in those different conditions.
-
-          The gist is that in order for a core-collapse supernova to make elements heavier than tin, the supernova has to be less hot and/or more dense than most mass models have been telling us for years.
-      markdown:
-        It’s longer than the abstract, but **anyone can read it and quickly understand** what the paper is about. That’s what gists are all about.
 
 .row
   .large-6.large-offset-3.columns

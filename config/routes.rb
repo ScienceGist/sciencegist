@@ -10,6 +10,8 @@ Sg::Application.routes.draw do
   resources :profiles, only: [:show, :edit, :update]
   get "pages/index"
   get "pages/about"
+  get "pages/example"
+  
   get '/blog' => 'blog#index'
 
   get '/p/:id' => 'papers#show', :as => 'paper'
