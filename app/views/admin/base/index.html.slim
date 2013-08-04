@@ -4,6 +4,7 @@ h2 Users
 p We have #{@user_count} users
 
 - @users.each do |user|
+  = user.id
   = image_tag user.gravatar_url
   
 h2 Papers
