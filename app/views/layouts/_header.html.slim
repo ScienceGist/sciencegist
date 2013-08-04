@@ -4,14 +4,12 @@ nav.top-bar
       h1
         a href="/"
           = image_tag '/images/sciencegist-logo-small.png', class: 'logo', width: 32, height: 32
+          | ScienceGist
     li.toggle-topbar.menu-icon
       a href="#"
-        span
+        span Menu
 
   section.top-bar-section
-    ul.left
-      li= link_to 'Tags', tags_path
-      li= link_to 'What is a good gist?', pages_example_path
     ul.right
       li= link_to 'Add gist', new_gist_path
       - if current_user

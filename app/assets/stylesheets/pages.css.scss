@@ -71,7 +71,7 @@ a {
 
 .top-bar .logo {
   position: relative;
-  top: 0px;
+  top: -2px;
 }
 .new_user_promo {
   padding: 1em;
@@ -167,5 +167,14 @@ a {
   .right {
     a { color: #111; }
     float: right;
+  }
+}
+
+.social_proof {
+  height: emCalc(166px);
+  background: url(/images/sciencegist-users.png);
+  .center .button {
+    position: relative;
+    top: emCalc(61.5px);
   }
 }

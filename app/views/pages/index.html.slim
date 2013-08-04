@@ -11,8 +11,34 @@
           | Science gists are simplified summaries of scientific papers. Our goal is to
           |  bring science closer to everyone. Click “Add gist” below to help.
       .add_gist
-        = link_to 'Add gist', new_gist_path, :class => 'button'
+        = link_to 'Add gist', new_gist_path, class: 'button'
+.social_proof
+  .row
+    .large-12.columns
+      .center
+        = link_to 'Join the growing ScienceGist community!', new_user_registration_path, class: 'button'
 
+.example_container
+  .row
+    .large-12.columns
+      h3 What are gists?
+      markdown:
+        Take this great paper for example: [High-molecular-mass hyaluronan mediates the cancer resistance of the naked mole rat](http://dx.doi.org/10.1038/nature12234), and read the [abstract](http://dx.doi.org/10.1038/nature12234). It is not very understandable to anyone but scientists working in the field of rodent biology. Now read [the gist of the paper](#{gist_path(22)}):
+        
+      .gist
+        markdown:
+          #### Gist
+          
+          This is a biology paper about the mechanism which gives [naked mole rats](https://en.wikipedia.org/wiki/Naked_mole_rat) a really long life , roughly 7.5 times longer then comparable rodents. For example, [house mice](https://en.wikipedia.org/wiki/House_mouse) live around 4 years while naked mole rats can live to be 30 years old. Not only do they live for a long time, they are also almost completely resistant to cancer. 
+
+          Researchers used [cell cultures](https://en.wikipedia.org/wiki/Cell_culture) of naked mole [fibroblasts](https://en.wikipedia.org/wiki/Fibroblast) (a framework building cell) and found out that they are way more [gooey](https://en.wikipedia.org/wiki/Viscosity) then cell cultures of guinea-pig or mouse cells. They found out the substance that was making the cultures more gooey is a [glycosaminoglycan](https://en.wikipedia.org/wiki/Glycosaminoglycan) (a structural molecule) called high-molecular-mass [hyaluronan](http://en.wikipedia.org/wiki/Hyaluronan) (HMM-HA). “High-molecular-mass” just means this hyaluronan is heavy, about 5 times heavier than human and mouse versions. Just a small amount of this substance is not enough to make the cell culture gooey though. The protein [hyaluronidase](https://en.wikipedia.org/wiki/Hyaluronidase), which removes hyaluronan, is much less active in naked mole rats, compared to the human version, which causes hyaluronan to build up and make things gooey. 
+
+          HMM-HA acts through a receptor on the cell surface ([CD44](https://en.wikipedia.org/wiki/CD44)) to make cells resistant to cancer. When you remove HMM-HA the naked mole rat cells become open to cancer again. 
+
+          This new type of cancer defense is very interesting for further anticancer and life longevity research.
+
+      markdown:
+        By reading the gist **anyone can quickly understand** what the paper is about. Notice also how new concepts are linked to Wikipedia articles for easier deep diving into the knowledge pool. That’s what gists are all about! 
 
 .row
   .large-6.large-offset-3.columns

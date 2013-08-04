@@ -6,10 +6,8 @@ p
   = p.input :authors, input_html: { id: 'authors', value: paper.authors}, required: false, placeholder: 'Fill in identifier above'
   = p.input :journal, input_html: { id: 'journal', value: paper.journal}, required: false, placeholder: 'Fill in identifier above'
   = p.input :tag_list, placeholder: "Tag this paper", label: 'Tags for this paper'
- 
 p
   strong Gist&nbsp;
-  | Describe in simple terms what the paper is about:
-= f.input :content, label: false, placeholder: 'The Gist'
+= f.input :content, label: false, placeholder: 'Describe in simple terms what the paper is about'
 .submit
   = f.button :submit, :class => 'button'
