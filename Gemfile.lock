@@ -7,9 +7,9 @@ GIT
 
 GIT
   remote: git://github.com/jure/paper_metadata.git
-  revision: ddc12218bc2faa267c4d63c9af06ac990efd0e0e
+  revision: ccc0a4fa344ff0038d759ceaa3f32cf70a80d5ae
   specs:
-    paper_metadata (0.0.4)
+    paper_metadata (0.0.5)
       nokogiri (= 1.5.6)
 
 GIT
