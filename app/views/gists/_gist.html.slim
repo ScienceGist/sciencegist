@@ -1,4 +1,4 @@
-.row
+.row itemscope="" itemtype="http://schema.org/Article"
   .large-12.columns
     .gist_box
       .actions
@@ -9,15 +9,18 @@
         .gist_author
           p
             | Written by&nbsp;
-            - if gist.user
-              = link_to link_to gist.author_name, profile_path(gist.user)
-            - else
-              = gist.author_name
-            |  #{distance_of_time_in_words_to_now(gist.created_at)} ago
+            span itemprop="author" itemtype="http://schema.org/Person"
+              span itemprop="name"
+                - if gist.user
+                  = link_to link_to gist.author_name, profile_path(gist.user)
+                - else
+                  = gist.author_name
+                |  #{distance_of_time_in_words_to_now(gist.created_at)} ago
       .gist
         - if !defined?(display_title) || display_title
           = render 'papers/header', paper: gist.paper
-        == gist.content_html
+        article itemprop="articleBody"
+          == gist.content_html
       - if !defined?(voting) || voting
         .score
           = link_to 'I get it ▲', vote_up_path(id: gist.id), class: 'vote_up'
