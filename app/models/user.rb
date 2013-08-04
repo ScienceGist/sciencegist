@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   
   acts_as_voter
 
+  before_save :ensure_name
+
   def self.find_for_twitter_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
 
@@ -32,6 +34,11 @@ class User < ActiveRecord::Base
 
   def karma
     gists.map(&:cached_votes_score).sum
+  end
+
+  def ensure_name
+    # Name is first part of email, e.g. jure@modrajagoda.si => Jure
+    self.name = email.match(/([\w+]*?)[\.@]/)[1].capitalize if name.blank?
   end
 
   def gravatar_url(size=80)
