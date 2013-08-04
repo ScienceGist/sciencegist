@@ -19,8 +19,8 @@ Sg::Application.configure do
   config.middleware.use ExceptionNotification::Rack,
     :email => {
       :email_prefix => "[ScienceGist Production] ",
-      :sender_address => %{"notifier" <info@sciencegist.com>},
-      :exception_recipients => %w{errors@sciencegist.com}
+      :sender_address => %{"Exception Notifier" <info@sciencegist.com>},
+      :exception_recipients => %w{info@sciencegist.com}
     }
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
