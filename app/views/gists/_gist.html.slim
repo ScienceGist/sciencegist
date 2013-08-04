@@ -15,7 +15,7 @@
                   = link_to link_to gist.author_name, profile_path(gist.user)
                 - else
                   = gist.author_name
-                |  #{distance_of_time_in_words_to_now(gist.created_at)} ago
+            |  #{distance_of_time_in_words_to_now(gist.created_at)} ago
       .gist
         - if !defined?(display_title) || display_title
           = render 'papers/header', paper: gist.paper
