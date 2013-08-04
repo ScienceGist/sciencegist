@@ -22,3 +22,17 @@
 .row.paper_container {
   margin-bottom: 2em;
 }
+
+.results {
+  .paper {
+    cursor: pointer;
+    padding: 0.5em;
+    border-radius: $global-radius;
+  }
+  .paper:hover {
+    background-color: $shadow_color;
+
+  }
+
+
+}

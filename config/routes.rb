@@ -29,8 +29,8 @@ Sg::Application.routes.draw do
 
   root :to => 'pages#index'
 
-  match 'doi/*identifiers' => 'identifiers#doi', via: [:get], format: false
-  match 'arxiv/*identifiers' => 'identifiers#arxiv', via: [:get], format: false
+  match 'doi/*identifiers' => 'identifiers#doi', via: [:get], format: false, as: :doi
+  match 'arxiv/*identifiers' => 'identifiers#arxiv', via: [:get], format: false, as: :arxiv
 
   get "tags/search"
   get "tags" => 'tags#index'

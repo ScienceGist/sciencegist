@@ -7,8 +7,8 @@ class PapersController < ApplicationController
 
   def index
     if params[:search]
-      @papers = Paper.where("identifier ILIKE ? OR title ILIKE ?", "%#{params[:search]}%", "%#{params[:search]}%").
-        joins(:gists).group("papers.id, gists.paper_id").having("count(gists.id) > 0")
+      @tags = ActsAsTaggableOn::Tag.where("name ILIKE ?", "%#{params[:search]}%").limit(5).all.map(&:name)
+      @papers = Paper.where("identifier ILIKE ? OR title ILIKE ?", "%#{params[:search]}%", "%#{params[:search]}%").page params[:page]
     else
       @papers = []
     end

@@ -1,9 +1,9 @@
-h1.paper_title=link_to_unless_current paper.title, paper_path(paper) 
-h5.paper_metadata 
-  span 
-    #{paper.authors} 
+h1.paper_title=link_to_unless_current paper.title, paper.identifier_path 
+.paper_metadata 
+  p 
+    = paper.authors
     - if paper.journal
       | (#{paper.journal})&nbsp;
-  = link_to paper.identifier, paper.url
+    = link_to paper.identifier, paper.url
 - if !defined?(hr) || hr
   hr

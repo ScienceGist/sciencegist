@@ -1,11 +1,17 @@
-br
 = render 'pages/search_form'
-- if @papers.present?
-  - @papers.each do |paper|
-    = render 'paper', paper: paper
-  p.center Only the highest ranked gists are displayed here. Click on a paper title to get all gists for that paper.
-- else
-  p.center
-    | No papers with that title or DOI have been gisted.
-  p.center
-    = link_to 'Add gist', new_gist_path, :class => 'btn'
+.row.results
+  .large-10.columns
+    - if @papers.present?
+      span #{page_entries_info @papers}.
+      - @papers.each do |paper|
+        = render 'paper_in_search', paper: paper
+      = paginate @papers
+    - else
+      p.center
+        | No papers with that title or DOI have been gisted.
+      p.center
+        = link_to 'Add gist', new_gist_path, :class => 'btn'
+  .large-2.columns
+    | Found #{pluralize(@tags.count, 'tag')}.
+    - @tags.each do |tag|
+      p.tag= tag

@@ -29,8 +29,7 @@ gem 'jquery-ui-rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'nokogiri'
-# Gems used only for assets and not required
-# in production environments by default.
+gem 'kaminari'
 
 gem 'zurb-foundation', '~> 4.2.3'
 gem 'sass-rails',   '~> 4.0.0'

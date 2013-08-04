@@ -3,6 +3,9 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready ->
+  $(".results .paper").on "click", (e) ->
+    window.location.href = $(this).find('h1 a').attr('href')
+
   $("#gist_paper_attributes_tag_list").tagit
     tagSource: (search, showChoices) ->
       that = this

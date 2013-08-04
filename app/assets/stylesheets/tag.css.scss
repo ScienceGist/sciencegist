@@ -1,3 +1,11 @@
+.tag { 
+  background-color: $color;
+  border-radius: $global-radius;
+  padding: .2em .5em .2em .5em; 
+  color: #fff;
+
+}
+
 ul.tagit {
     padding: 1px 5px;
     overflow: auto;

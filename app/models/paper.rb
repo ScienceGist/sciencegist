@@ -15,13 +15,22 @@ class Paper < ActiveRecord::Base
   end
 
   def url
+    identifier_interpolator('http://dx.doi.org/', 'http://arxiv.org/abs/')
+  end
+
+  def identifier_path
+    identifier_interpolator('/doi/', '/arxiv/')
+  end
+
+  def identifier_interpolator(doi, arxiv)
     if identifier =~ /^doi:\s*(.*)/i
-      "http://dx.doi.org/#{$1}"
+      "#{doi}#{$1}"
     elsif identifier =~ /^arXiv:\s*(.*)/i
-      "http://arxiv.org/abs/#{$1}"
+      "#{arxiv}#{$1}"
     else
       nil
     end
+
   end
 
   def top_gist

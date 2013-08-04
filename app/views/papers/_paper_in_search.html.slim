@@ -1,0 +1,11 @@
+.paper
+  .gist
+    h1.paper_title=link_to_unless_current "#{pluralize(paper.gists.count, 'gist')} for: #{paper.title}", paper.identifier_path 
+    .paper_metadata 
+      p 
+        = paper.authors
+        - if paper.journal
+          |  (#{paper.journal})&nbsp;
+        = link_to paper.identifier, paper.url
+
+    
