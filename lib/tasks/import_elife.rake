@@ -11,7 +11,7 @@ namespace :elife do
     while no_more_results == false
       page.css('.elife-searchlist-results .highwire-article-citation').each do |paper|
         results += [{
-          doi: 'doi:' + paper.css('div.highwire-cite-doi').first.text,
+          doi: 'doi: ' + paper.css('div.highwire-cite-doi').first.text,
           tag_list: paper.css('.citation-cat-heading').map(&:text).join(', ')
         }]
       end

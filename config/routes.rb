@@ -34,6 +34,7 @@ Sg::Application.routes.draw do
 
   get "tags/search"
   get "tags" => 'tags#index'
+  get "tag/:name" => 'tags#show', as: :tag
 
   namespace :admin do
     resources :users

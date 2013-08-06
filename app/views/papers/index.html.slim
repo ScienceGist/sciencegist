@@ -2,16 +2,20 @@
 .row.results
   .large-10.columns
     - if @papers.present?
-      span #{page_entries_info @papers}.
+      p #{page_entries_info @papers}.
       - @papers.each do |paper|
         = render 'paper_in_search', paper: paper
       = paginate @papers
     - else
-      p.center
-        | No papers with that title or DOI have been gisted.
-      p.center
-        = link_to 'Add gist', new_gist_path, :class => 'btn'
+      p
+        strong Aww, shucks. 
+        |  The bad news is that no papers with this title or this DOI have been gisted yet. 
+      p 
+        | The good news is that you can easily help us out by&nbsp;
+        = link_to 'adding a gist', new_gist_path
+        |  yourself!
   .large-2.columns
-    | Found #{pluralize(@tags.count, 'tag')}.
-    - @tags.each do |tag|
-      p.tag= tag
+    - if @tags.present?
+      p Found #{pluralize(@tags.count, 'tag')}.
+      - @tags.each do |tag|
+        p.tag=link_to tag, tag_path(tag)

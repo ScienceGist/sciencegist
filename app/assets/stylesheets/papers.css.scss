@@ -10,6 +10,11 @@
 .paper_gists {
 
 }
+.header {
+  .paper_title {
+    font-size: emCalc(23px);
+  }
+}
 
 .paper_title {
   margin-bottom: 0;
@@ -26,10 +31,10 @@
 .results {
   .paper {
     cursor: pointer;
-    padding: 0.5em;
     border-radius: $global-radius;
   }
   .paper:hover {
+    padding: -3em;
     background-color: $shadow_color;
 
   }

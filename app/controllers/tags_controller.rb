@@ -9,4 +9,8 @@ class TagsController < ApplicationController
   def index
     @tags = ActsAsTaggableOn::Tag.all.order('name asc')
   end
+
+  def show
+    @tag = ActsAsTaggableOn::Tag.find_by_name(params[:name])
+  end
 end

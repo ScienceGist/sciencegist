@@ -3,7 +3,12 @@ h1.paper_title=link_to_unless_current paper.title, paper.identifier_path
   p 
     = paper.authors
     - if paper.journal
-      | (#{paper.journal})&nbsp;
+      |  (#{paper.journal})&nbsp;
     = link_to paper.identifier, paper.url
+    - if paper.tags
+      ul.inline-list
+        - paper.tags.each do |tag|
+          li.tag= link_to tag, tag_path(tag.name)
+
 - if !defined?(hr) || hr
   hr
