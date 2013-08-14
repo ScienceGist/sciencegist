@@ -1,7 +1,8 @@
 class IdentifiersController < ApplicationController
   def doi
-    @doi = "doi: " + params[:identifiers]
-    @paper = Paper.find_by_identifier(@doi)
+    @doi = 'doi: ' + params[:identifiers]
+    @doi_condensed = 'doi:' + params[:identifiers]
+    @paper = Paper.where('identifier = ? OR identifier = ?', @doi, @doi_condensed).first
     unless @paper
       metadata = PaperMetadata.metadata_for(@doi)
       unless metadata[:status] == :NODOI
