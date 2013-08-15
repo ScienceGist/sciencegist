@@ -1,9 +1,9 @@
 require 'grape'
-require 'api_v1'
+require 'api'
 require 'entities'
 
 Sg::Application.routes.draw do
-  mount Sg::ApiV1 => '/'
+  mount Sg::Api => '/'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
