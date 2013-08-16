@@ -10,6 +10,9 @@ nav.top-bar
         span Menu
 
   section.top-bar-section
+    ul.left
+      li= link_to 'Blog', root_url(subdomain: 'blog')
+      li= link_to 'Categories', tags_path
     ul.right
       li= link_to 'Add gist', new_gist_path
       - if current_user
