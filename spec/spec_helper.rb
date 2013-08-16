@@ -35,4 +35,8 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  config.include RSpec::Rails::RequestExampleGroup, :type => :request, :example_group => {
+    :file_path => /spec\/api/
+  }
 end
