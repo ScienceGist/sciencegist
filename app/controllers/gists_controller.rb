@@ -43,7 +43,7 @@ class GistsController < ApplicationController
     @gist.paper = paper if paper
     @gist.user = current_user
     if @gist.save
-      redirect_to paper_path(@gist.paper_id)
+      redirect_to @gist.paper.identifier_path
     else
       render 'new'
 

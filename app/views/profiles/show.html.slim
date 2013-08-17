@@ -8,7 +8,7 @@
       ul
         - if @wrote.present?
           - @wrote.each do |gist|
-            li=link_to "#{gist.paper.title} (#{gist.cached_votes_score})", paper_path(gist.paper.id)
+            li=link_to "#{gist.paper.title} (#{gist.cached_votes_score})", gist.paper.identifier_path
         - else
           p Hasn't written any gists yet.
     p
