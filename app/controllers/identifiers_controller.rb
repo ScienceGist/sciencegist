@@ -1,7 +1,7 @@
 class IdentifiersController < ApplicationController
   def doi
-    @doi = 'doi: ' + params[:identifiers]
-    @doi_condensed = 'doi:' + params[:identifiers]
+    @doi = 'doi: ' + params[:identifiers].downcase
+    @doi_condensed = 'doi:' + params[:identifiers].downcase
     @paper = Paper.where('identifier = ? OR identifier = ?', @doi, @doi_condensed).first
     unless @paper
       metadata = PaperMetadata.metadata_for(@doi)
@@ -16,7 +16,7 @@ class IdentifiersController < ApplicationController
   end
 
   def arxiv
-    @arxiv = "arXiv: " + params[:identifiers]
+    @arxiv = "arXiv: " + params[:identifiers].downcase
     @paper = Paper.find_by_identifier(@arxiv)
     unless @paper
       metadata = PaperMetadata.metadata_for(@arxiv)
