@@ -16,8 +16,9 @@ class IdentifiersController < ApplicationController
   end
 
   def arxiv
-    @arxiv = "arXiv: " + params[:identifiers].downcase
-    @paper = Paper.where('lower(identifier) = ?', @arxiv).first
+    @arxiv = "arxiv: " + params[:identifiers].downcase
+    @arxiv_condensed = "arxiv: " + params[:identifiers].downcase
+    @paper = Paper.where('lower(identifier) = ? OR lower(identifier) = ?', @arxiv, @arxiv_condensed).first
     unless @paper
       metadata = PaperMetadata.metadata_for(@arxiv)
       unless metadata.blank?
