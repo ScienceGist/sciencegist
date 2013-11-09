@@ -8,6 +8,9 @@ ScienceGist is an online repository of gists, which are short and clear summarie
 
 There are various [issues listed in the issues tab](https://github.com/jure/sciencegist/issues), pick one and go!
 
+# Contact
+
+If you want to talk to us, just email us at [info@sciencegist.com](mailto:info@sciencegist.com) or tweet to [@ScienceGist](http://www.twitter.com/ScienceGist)  :).
 
 # License
 
