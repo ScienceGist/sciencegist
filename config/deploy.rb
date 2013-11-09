@@ -5,7 +5,7 @@ set :repository,  "git@github.com:jure/sciencegist.git"
 set :branch, "master"
 set :use_sudo, false
 set :ssh_options, { :forward_agent => true }
-set :rbenv_ruby_version, "ruby-2.0.0-p0"
+set :rbenv_ruby_version, "ruby-2.0.0-p247"
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
