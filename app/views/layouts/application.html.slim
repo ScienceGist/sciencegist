@@ -27,7 +27,7 @@ body*{:class => "#{controller.controller_name}_#{controller.action_name}" }
       - if flash[:alert]
         .alert-box.alert= alert
   = yield
-
+  = render :partial => 'layouts/footer'
   #overlay
   #signup_form
     .row
