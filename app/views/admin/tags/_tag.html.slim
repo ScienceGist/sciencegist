@@ -1,0 +1,8 @@
+tr
+  td= tag.id
+  td= tag.name
+  td= tag.taggings.count
+  td
+    = link_to 'Edit', edit_admin_tag_path(tag.id)
+    | &nbsp;
+    = link_to 'Delete', admin_tag_path(tag.id), :method => :delete

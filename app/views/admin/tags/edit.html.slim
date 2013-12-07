@@ -1,0 +1,3 @@
+h4 Editing tag: #{@tag.name}
+= simple_form_for @tag, url: admin_tag_path(@tag.id) do |f|
+  = render 'tags/form', f: f, tag: @tag

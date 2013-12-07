@@ -1,0 +1,12 @@
+h1 Tags
+
+table
+  thead
+    tr
+      th Id
+      th Name
+      th Count
+      th Actions
+  tbody
+    - @tags.each do |tag|
+      = render 'tag', tag: tag

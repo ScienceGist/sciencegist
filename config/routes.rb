@@ -40,6 +40,7 @@ Sg::Application.routes.draw do
     resources :users
     resources :posts
     resources :gists
+    resources :tags
     root :to => 'base#index'
   end
 end
