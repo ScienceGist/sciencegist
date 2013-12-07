@@ -2,7 +2,7 @@ class Admin::TagsController < ApplicationController
   layout 'admin/layout'
 
   def index
-    @tags = ActsAsTaggableOn::Tag.order('id asc').all
+    @tags = ActsAsTaggableOn::Tag.order('id asc')
     @tag = ActsAsTaggableOn::Tag.new
   end
 
