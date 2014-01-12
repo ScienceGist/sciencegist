@@ -10,7 +10,7 @@ gem 'slim-rails'
 gem 'psych'
 gem 'devise'
 gem 'pg'
-gem 'simple_form', '~> 3.0.0.rc'
+gem 'simple_form', '~> 3.0.0'
 gem 'redcarpet'
 gem 'pygmentize'
 gem 'capistrano'
@@ -48,6 +48,8 @@ gem 'pry-rails', :group => :development
 gem 'jquery-rails'
 
 group :test, :development do
+  gem "better_errors"
+  gem "binding_of_caller"
   gem 'factory_girl_rails'
   gem "rspec-rails", "~> 2.0"
 end

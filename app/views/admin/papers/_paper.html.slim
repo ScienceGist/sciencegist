@@ -1,0 +1,7 @@
+tr
+  td= paper.id
+  td= paper.created_at
+  td= paper.title
+  td= paper.authors
+  td
+    = link_to 'Delete', admin_paper_path(paper.id), :method => :delete

@@ -1,0 +1,13 @@
+h1 Papers
+
+table
+  thead
+    tr
+      th Id
+      th Created_at
+      th Paper title
+      th Author
+      th Actions
+  tbody
+    - @papers.each do |paper|
+      = render 'paper', paper: paper

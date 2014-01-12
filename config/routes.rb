@@ -3,6 +3,8 @@ require 'api'
 require 'entities'
 
 Sg::Application.routes.draw do
+  get "papers/index"
+  get "papers/destroy"
   mount Sg::Api => '/'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
@@ -41,6 +43,7 @@ Sg::Application.routes.draw do
     resources :posts
     resources :gists
     resources :tags
+    resources :papers
     root :to => 'base#index'
   end
 end
