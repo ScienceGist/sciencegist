@@ -17,9 +17,9 @@ $base-font-size: 100% !default;
 $em-base: 16px !default;
 
 // Working in ems is annoying. Think in pixels by using this handy function, emCalc(#px)
-@function emCalc($pxWidth) {
-  @return $pxWidth / $em-base * 1em;
-}
+// @function emCalc($pxWidth) {
+//   @return $pxWidth / $em-base * 1em;
+// }
 
 // Change whether or not you include browser prefixes
 // $experimental: true;

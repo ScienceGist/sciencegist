@@ -31,10 +31,9 @@ gem 'omniauth-twitter'
 gem 'nokogiri'
 gem 'kaminari'
 
-gem 'zurb-foundation', '~> 4.2.3'
+gem 'foundation-rails'
 gem 'sass-rails',   '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
-
 gem 'newrelic_rpm'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

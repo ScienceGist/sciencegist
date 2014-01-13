@@ -37,7 +37,7 @@ body*{:class => "#{controller.controller_name}_#{controller.action_name}" }
             p#close= link_to 'x', ''
           .row
             .large-5.columns
-              p Only members can vote. Join for free:
+              p Only members can vote. Sign up here:
               = simple_form_for new_user, :url => registration_path(:user) do |u|
                 = render 'users/form_popup', f: u, button_text: 'Join', button_class: ''
             .large-5.columns
